@@ -96,7 +96,7 @@ export function EndlessGame({ brawlers }: { brawlers: BrawlerRef[] }) {
 
       {run.over ? (
         <section className="panel mx-auto w-full max-w-md animate-pop p-5 text-center">
-          <p className="stroke-text text-4xl text-lose">Out of hearts!</p>
+          <p className="stroke-text text-3xl text-lose sm:text-4xl">Out of hearts!</p>
           {run.round.answer && (
             <div className="mt-3 flex items-center justify-center gap-3">
               <BrawlerPortrait brawler={run.round.answer} size={64} />
@@ -183,7 +183,7 @@ function ModePicker({ onStart, best, busy, last }: { onStart: (m: EndlessMode) =
   return (
     <div className="flex flex-col items-center gap-5">
       <section className="text-center">
-        <h1 className="stroke-text text-4xl text-gold sm:text-5xl">♾️ Endless</h1>
+        <h1 className="stroke-text text-3xl text-gold sm:text-5xl">♾️ Endless</h1>
         <p className="mt-2 max-w-md font-bold text-white/85">
           Guess brawler after brawler. Every wrong guess costs a ❤️ — how far can you go?
         </p>
@@ -201,15 +201,15 @@ function ModePicker({ onStart, best, busy, last }: { onStart: (m: EndlessMode) =
               <button
                 disabled={busy}
                 onClick={() => onStart(m)}
-                className="group flex w-full items-center gap-4 rounded-3xl border-[3px] border-ink p-4 text-left shadow-[inset_0_4px_0_rgb(255_255_255/0.3),inset_0_-6px_0_rgb(0_0_0/0.25),0_6px_0_var(--color-ink)] transition hover:-translate-y-1 active:translate-y-1 disabled:opacity-60"
-                style={{ background: `linear-gradient(160deg, ${info.color}, color-mix(in oklab, ${info.color} 55%, #0b1240))` }}
+                className="slant slant-card skin-mode pressable group flex w-full items-center gap-4 rounded-2xl p-4 text-left"
+                style={{ "--c": info.color } as React.CSSProperties}
               >
                 <span className="text-4xl transition group-hover:scale-110" aria-hidden>
                   {info.icon}
                 </span>
                 <span>
-                  <span className="stroke-text block text-2xl">{info.name}</span>
-                  <span className="text-sm font-bold text-white/90">
+                  <span className="stroke-text block text-xl sm:text-2xl">{info.name}</span>
+                  <span className="mt-1 block text-sm font-bold text-white/90">
                     {ENDLESS_HEARTS[m]} ❤️ · Best: {best[m] ?? 0}
                   </span>
                 </span>

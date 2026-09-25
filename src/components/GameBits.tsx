@@ -13,11 +13,12 @@ export function GuessList({ guesses }: { guesses: GuessView[] }) {
       {[...guesses].reverse().map((g) => (
         <li
           key={g.brawler.id}
-          className={`tile animate-pop !flex-row !justify-start gap-3 px-2 py-1.5 ${g.correct ? "tile-win" : "tile-lose"}`}
+          className={`slant animate-pop flex items-center gap-3 rounded-xl py-1.5 pl-3 pr-4 ${g.correct ? "skin-win" : "skin-lose"}`}
+          style={{ "--drop": "4px" } as React.CSSProperties}
         >
-          <BrawlerPortrait brawler={g.brawler} size={44} className="!border-2" />
+          <BrawlerPortrait brawler={g.brawler} size={44} />
           <span className="stroke-text-sm text-xl">{g.brawler.name}</span>
-          <span className="stroke-text-sm ml-auto pr-2 text-2xl">{g.correct ? "✓" : "✗"}</span>
+          <span className="stroke-text-sm ml-auto text-2xl">{g.correct ? "✓" : "✗"}</span>
         </li>
       ))}
     </ol>
@@ -47,7 +48,7 @@ export function Countdown({ to, className = "" }: { to: string; className?: stri
 
 export function ModeTabs({ current, solved = {} }: { current: Mode; solved?: Partial<Record<Mode, boolean>> }) {
   return (
-    <nav className="mx-auto mb-4 flex w-full max-w-md justify-center gap-2" aria-label="Daily modes">
+    <nav className="mx-auto mb-4 flex w-full max-w-md justify-center gap-3" aria-label="Daily modes">
       {MODES.map((m) => {
         const info = MODE_INFO[m];
         const active = m === current;
@@ -57,13 +58,13 @@ export function ModeTabs({ current, solved = {} }: { current: Mode; solved?: Par
             href={`/${m}`}
             aria-current={active ? "page" : undefined}
             title={info.name}
-            className={`relative grid size-14 place-items-center rounded-2xl border-[3px] border-ink text-2xl shadow-[0_4px_0_var(--color-ink)] transition active:translate-y-1 active:shadow-none sm:size-16 sm:text-3xl ${active ? "scale-110" : "opacity-80 hover:opacity-100"}`}
-            style={{ background: `linear-gradient(180deg, ${info.color}, color-mix(in oklab, ${info.color} 60%, black))` }}
+            className={`slant skin-mode pressable grid size-14 place-items-center rounded-xl text-2xl sm:size-16 sm:text-3xl ${active ? "scale-110" : "opacity-75 hover:opacity-100"}`}
+            style={{ "--c": info.color } as React.CSSProperties}
           >
             <span aria-hidden>{info.icon}</span>
             <span className="sr-only">{info.name}</span>
             {solved[m] && (
-              <span className="absolute -right-2 -top-2 grid size-6 place-items-center rounded-full border-2 border-ink bg-win text-xs font-black" aria-label="solved">
+              <span className="absolute -right-2 -top-2 grid size-6 place-items-center rounded-full border-[3px] border-ink bg-win text-xs font-black" aria-label="solved">
                 ✓
               </span>
             )}
@@ -88,12 +89,12 @@ export function WinPanel({
   return (
     <section className="panel relative mx-auto w-full max-w-md animate-pop overflow-hidden p-5 text-center">
       <Confetti />
-      <p className="stroke-text text-4xl text-gold">{title}</p>
+      <p className="stroke-text text-4xl text-gold sm:text-5xl">{title}</p>
       <div className="mt-3 flex items-center justify-center gap-4">
         <BrawlerPortrait brawler={answer} size={96} className="animate-float" />
         <div className="text-left">
           <p className="font-bold text-white/80">You found</p>
-          <p className="stroke-text text-3xl">{answer.name}</p>
+          <p className="stroke-text text-2xl sm:text-3xl">{answer.name}</p>
           <p className="font-bold text-white/80">
             in <span className="text-gold">{guesses}</span> {guesses === 1 ? "guess" : "guesses"}
           </p>

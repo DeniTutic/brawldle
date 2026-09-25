@@ -14,8 +14,8 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center gap-6">
       <section className="mt-4 text-center">
-        <Logo className="animate-float text-6xl sm:text-7xl" />
-        <p className="stroke-text-sm mt-4 text-lg sm:text-xl">Guess the Brawl Stars brawler of the day!</p>
+        <Logo className="animate-float text-[2.2rem] sm:text-7xl" />
+        <p className="stroke-text-sm mt-4 text-balance text-lg sm:text-xl">Guess the Brawl Stars brawler of the day!</p>
         <p className="mt-1 font-bold text-white/75">
           Puzzle #{summary.puzzleNo} · New brawlers in <Countdown to={summary.nextPuzzleAt} className="text-white" />
         </p>
@@ -28,21 +28,23 @@ export default async function Home() {
             <Link
               key={mode}
               href={`/${mode}`}
-              className="group relative overflow-hidden rounded-3xl border-[3px] border-ink p-4 shadow-[inset_0_4px_0_rgb(255_255_255/0.35),inset_0_-6px_0_rgb(0_0_0/0.25),0_6px_0_var(--color-ink)] transition hover:-translate-y-1 active:translate-y-1 active:shadow-[inset_0_4px_0_rgb(255_255_255/0.35),0_1px_0_var(--color-ink)] sm:p-5"
-              style={{ background: `linear-gradient(160deg, ${info.color}, color-mix(in oklab, ${info.color} 55%, #0b1240))` }}
+              className="slant slant-card skin-mode pressable group rounded-2xl p-4 sm:p-5"
+              style={{ "--c": info.color } as React.CSSProperties}
             >
-              <span aria-hidden className="absolute -bottom-3 -right-2 text-7xl opacity-30 transition group-hover:scale-110 sm:text-8xl">
-                {info.icon}
+              <span className="slant-clip">
+                <span aria-hidden className="absolute -bottom-3 -right-1 text-7xl opacity-30 transition group-hover:scale-110 sm:text-8xl">
+                  {info.icon}
+                </span>
               </span>
-              <p className="stroke-text text-2xl sm:text-3xl">{info.name}</p>
-              <p className="relative mt-1 text-sm font-bold leading-snug text-white/90 sm:text-base">{info.tagline}</p>
-              <p className="stroke-text-sm relative mt-3 text-sm">
+              <p className="stroke-text text-xl sm:text-2xl">{info.name}</p>
+              <p className="mt-1.5 text-sm font-bold leading-snug text-white/90 sm:text-base">{info.tagline}</p>
+              <p className="stroke-text-sm mt-3 whitespace-nowrap text-sm">
                 {solved ? (
-                  <span className="rounded-lg border-2 border-ink bg-win px-2 py-0.5">✓ Solved in {guesses}</span>
+                  <span className="slant chip skin-win">✓ Solved in {guesses}</span>
                 ) : guesses ? (
-                  <span className="rounded-lg border-2 border-ink bg-ink/40 px-2 py-0.5">{guesses} guesses so far</span>
+                  <span className="slant chip skin-ink">▶ {guesses} {guesses === 1 ? "guess" : "guesses"}</span>
                 ) : (
-                  <span className="rounded-lg border-2 border-ink bg-ink/40 px-2 py-0.5">Play ▶</span>
+                  <span className="slant chip skin-ink">Play ▶</span>
                 )}
               </p>
             </Link>
@@ -54,19 +56,20 @@ export default async function Home() {
 
       <Link
         href="/endless"
-        className="group relative flex w-full max-w-2xl items-center gap-4 overflow-hidden rounded-3xl border-[3px] border-ink bg-gradient-to-r from-[#ff5a36] to-[#c2185b] p-4 shadow-[inset_0_4px_0_rgb(255_255_255/0.3),inset_0_-6px_0_rgb(0_0_0/0.25),0_6px_0_var(--color-ink)] transition hover:-translate-y-1 sm:p-5"
+        className="slant slant-card pressable group flex w-full max-w-2xl items-center gap-4 rounded-2xl p-4 sm:p-5"
+        style={{ "--skin": "linear-gradient(100deg, #ff5a36, #c2185b)", "--edge": "#7d0f3a" } as React.CSSProperties}
       >
         <span aria-hidden className="text-5xl transition group-hover:rotate-12">♾️</span>
         <div>
-          <p className="stroke-text text-2xl sm:text-3xl">Endless mode</p>
-          <p className="font-bold text-white/90">Unlimited brawlers. Don&apos;t run out of hearts!</p>
+          <p className="stroke-text text-xl sm:text-2xl">Endless mode</p>
+          <p className="mt-1 font-bold text-white/90">Unlimited brawlers. Don&apos;t run out of hearts!</p>
         </div>
         <span className="btn btn-sm ml-auto hidden sm:inline-flex">Play</span>
       </Link>
 
       {summary.yesterday.length > 0 && (
         <section className="panel-dark w-full max-w-2xl p-4 text-center">
-          <h2 className="stroke-text-sm text-lg">Yesterday&apos;s brawlers</h2>
+          <h2 className="stroke-text text-base sm:text-lg">Yesterday&apos;s brawlers</h2>
           <ul className="mt-3 flex flex-wrap justify-center gap-4">
             {summary.yesterday.map(({ mode, brawler }) => (
               <li key={mode} className="flex flex-col items-center gap-1">

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-const H = ({ children }: { children: React.ReactNode }) => <h2 className="stroke-text-sm mt-6 text-2xl text-gold">{children}</h2>;
+const H = ({ children }: { children: React.ReactNode }) => <h2 className="stroke-text mt-7 mb-1 text-xl text-gold">{children}</h2>;
 
 export default function AboutPage() {
   return (
-    <article className="panel mx-auto max-w-2xl p-6 font-semibold leading-relaxed text-white/90 sm:p-8">
-      <h1 className="stroke-text text-4xl">How to play</h1>
+    <article className="panel mx-auto max-w-2xl p-6 font-medium leading-relaxed text-white/90 sm:p-8">
+      <h1 className="stroke-text text-3xl sm:text-4xl">How to play</h1>
       <p className="mt-3">
         Every day at <b>00:00 UTC</b> Brawldle picks a new secret brawler for each of the four modes. Type a brawler&apos;s name to guess —
         there&apos;s no guess limit, but fewer guesses means more points.

@@ -61,41 +61,43 @@ export function GuessInput({
 
   return (
     <div className="relative mx-auto w-full max-w-md">
-      <div className="flex gap-2">
-        <input
-          ref={input}
-          type="text"
-          role="combobox"
-          aria-expanded={showList}
-          aria-controls={listId}
-          aria-autocomplete="list"
-          aria-activedescendant={showList ? `${listId}-${active}` : undefined}
-          aria-label="Type a brawler name"
-          placeholder="Type a brawler name..."
-          autoComplete="off"
-          autoCorrect="off"
-          spellCheck={false}
-          enterKeyHint="go"
-          disabled={disabled}
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setOpen(true);
-            setActive(0);
-          }}
-          onFocus={() => setOpen(true)}
-          onBlur={() => setTimeout(() => setOpen(false), 120)}
-          onKeyDown={onKeyDown}
-          className="min-w-0 flex-1 rounded-2xl border-[3px] border-ink bg-white px-4 py-3 text-lg font-extrabold text-ink shadow-[inset_0_3px_0_rgb(0_0_0/0.12),0_4px_0_var(--color-ink)] outline-none placeholder:font-bold placeholder:text-ink/40 focus:ring-4 focus:ring-gold disabled:opacity-60"
-        />
+      <div className="flex gap-3">
+        <div className="slant field min-w-0 flex-1 rounded-xl">
+          <input
+            ref={input}
+            type="text"
+            role="combobox"
+            aria-expanded={showList}
+            aria-controls={listId}
+            aria-autocomplete="list"
+            aria-activedescendant={showList ? `${listId}-${active}` : undefined}
+            aria-label="Type a brawler name"
+            placeholder="Type a brawler name..."
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            enterKeyHint="go"
+            disabled={disabled}
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setOpen(true);
+              setActive(0);
+            }}
+            onFocus={() => setOpen(true)}
+            onBlur={() => setTimeout(() => setOpen(false), 120)}
+            onKeyDown={onKeyDown}
+            className="w-full bg-transparent px-5 py-3.5 text-lg font-bold text-ink outline-none placeholder:font-medium placeholder:text-ink/45 disabled:opacity-60"
+          />
+        </div>
         <button className="btn btn-green" disabled={disabled || !matches.length} onClick={() => choose(matches[active])} aria-label="Submit guess">
-          <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <svg viewBox="0 0 24 24" className="size-6 drop-shadow-[0_2px_0_#05071a]" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
             <path d="M5 12h14M13 5l7 7-7 7" />
           </svg>
         </button>
       </div>
       {showList && (
-        <ul id={listId} role="listbox" className="panel-dark absolute inset-x-0 top-full z-20 mt-2 max-h-80 overflow-auto p-1.5 !bg-[#0c1450]">
+        <ul id={listId} role="listbox" className="panel-dark absolute inset-x-0 top-full z-20 mt-3 max-h-80 overflow-auto p-1.5 !bg-[#0c1450]">
           {matches.map((b, i) => (
             <li
               key={b.id}
@@ -105,9 +107,9 @@ export function GuessInput({
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => choose(b)}
               onMouseEnter={() => setActive(i)}
-              className={`flex cursor-pointer items-center gap-3 rounded-xl px-2 py-1.5 ${i === active ? "bg-royal" : ""}`}
+              className={`flex cursor-pointer items-center gap-3 rounded-lg px-2 py-1.5 ${i === active ? "bg-royal" : ""}`}
             >
-              <BrawlerPortrait brawler={b} size={40} className="!border-2" />
+              <BrawlerPortrait brawler={b} size={40} />
               <span className="stroke-text-sm text-lg">{b.name}</span>
             </li>
           ))}

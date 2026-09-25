@@ -20,7 +20,7 @@ export default async function ProfilePage() {
   }
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-col gap-4">
-      <h1 className="stroke-text text-center text-4xl text-gold">{stats.name ?? "Guest"}&apos;s stats</h1>
+      <h1 className="stroke-text text-center text-3xl text-gold sm:text-4xl">{stats.name ?? "Guest"}&apos;s stats</h1>
       <section className="panel flex items-center justify-around p-4 text-center">
         <div>
           <p className="stroke-text text-4xl text-gold">{stats.points.toLocaleString()}</p>
@@ -55,10 +55,11 @@ export default async function ProfilePage() {
       </section>
       <section className="panel-dark p-4">
         <p className="stroke-text-sm text-xl">♾️ Endless bests</p>
-        <ul className="mt-2 flex flex-wrap gap-2">
+        <ul className="mt-3 flex flex-wrap gap-3">
           {ENDLESS_MODES.map((m) => (
-            <li key={m} className="rounded-xl border-2 border-ink px-3 py-1 text-sm font-extrabold" style={{ background: MODE_INFO[m].color }}>
-              <span className="stroke-text-sm">{MODE_INFO[m].icon} {MODE_INFO[m].name}: {stats.endlessBest[m] ?? 0}</span>
+            <li key={m} className="slant chip skin-mode text-sm" style={{ "--c": MODE_INFO[m].color } as React.CSSProperties}>
+              <span aria-hidden>{MODE_INFO[m].icon}</span>
+              <span className="stroke-text-sm">{MODE_INFO[m].name}: {stats.endlessBest[m] ?? 0}</span>
             </li>
           ))}
         </ul>

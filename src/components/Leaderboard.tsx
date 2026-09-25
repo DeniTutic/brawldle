@@ -32,8 +32,8 @@ export function Leaderboard({ initialBoard, signedIn, googleEnabled }: { initial
 
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-4">
-      <h1 className="stroke-text text-4xl text-gold sm:text-5xl">🏆 Leaderboards</h1>
-      <div role="tablist" className="panel-dark flex w-full gap-1 p-1.5">
+      <h1 className="stroke-text text-3xl text-gold sm:text-5xl">🏆 Leaderboards</h1>
+      <div role="tablist" className="panel-dark flex w-full gap-1.5 p-2">
         {BOARDS.map((b) => (
           <button
             key={b.id}
@@ -44,7 +44,7 @@ export function Leaderboard({ initialBoard, signedIn, googleEnabled }: { initial
               if (b.id === "endless") setMode("mixed");
               else if (mode === "mixed") setMode("classic");
             }}
-            className={`stroke-text-sm flex-1 rounded-xl py-2 text-base transition sm:text-lg ${board === b.id ? "bg-gold" : "hover:bg-white/10"}`}
+            className={`slant stroke-text-sm flex-1 rounded-lg py-2 text-base sm:text-lg ${board === b.id ? "skin-gold" : "slant-ghost text-white/85"}`}
           >
             {b.label}
           </button>
@@ -57,10 +57,11 @@ export function Leaderboard({ initialBoard, signedIn, googleEnabled }: { initial
               key={m}
               onClick={() => setMode(m)}
               aria-pressed={mode === m}
-              className={`stroke-text-sm rounded-xl border-[3px] border-ink px-3 py-1 text-sm transition ${mode === m ? "scale-105" : "opacity-60 hover:opacity-100"}`}
-              style={{ background: MODE_INFO[m].color }}
+              className={`slant chip skin-mode pressable stroke-text-sm text-sm ${mode === m ? "scale-105" : "opacity-60 hover:opacity-100"}`}
+              style={{ "--c": MODE_INFO[m].color } as React.CSSProperties}
             >
-              {MODE_INFO[m].icon} {MODE_INFO[m].name}
+              <span aria-hidden>{MODE_INFO[m].icon}</span>
+              {MODE_INFO[m].name}
             </button>
           ))}
         </div>
@@ -73,7 +74,7 @@ export function Leaderboard({ initialBoard, signedIn, googleEnabled }: { initial
         </p>
       )}
 
-      <ol className="panel w-full divide-y-2 divide-ink/40 overflow-hidden p-0">
+      <ol className="panel w-full divide-y-[3px] divide-ink/40 overflow-hidden p-0">
         {rows === null ? (
           <li className="h-40 animate-pulse" aria-busy="true" />
         ) : rows.length === 0 ? (

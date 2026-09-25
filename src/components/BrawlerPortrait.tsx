@@ -8,7 +8,7 @@ export function BrawlerPortrait({ brawler, size = 56, className = "" }: { brawle
       alt={brawler.name}
       width={size}
       height={size}
-      className={`rounded-xl border-[3px] border-ink bg-[#3a58d6] object-cover ${className}`}
+      className={`${size >= 56 ? "rounded-xl border-4" : "rounded-[10px] border-[3px]"} border-ink bg-[#3a58d6] object-cover ${className}`}
       style={{ width: size, height: size }}
     />
   );

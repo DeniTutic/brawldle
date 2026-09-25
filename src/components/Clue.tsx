@@ -11,7 +11,7 @@ export function Clue({ clue, shakeKey, solved }: { clue: ClueView; shakeKey: num
       <h1 className="stroke-text text-2xl sm:text-3xl" style={{ color: info.color }}>
         {info.icon} {info.name}
       </h1>
-      <p className="mt-1 font-bold text-white/85">{prompt(clue)}</p>
+      <p className="mt-2 font-semibold text-white/85">{prompt(clue)}</p>
       <div key={shakeKey} className={shakeKey ? "animate-shake" : ""}>
         {clue.mode === "silhouette" && <SilhouetteClue clue={clue} solved={solved} />}
         {clue.mode === "emoji" && <EmojiClue clue={clue} />}
@@ -37,14 +37,14 @@ function prompt(clue: ClueView) {
 function SilhouetteClue({ clue, solved }: { clue: Extract<ClueView, { mode: "silhouette" }>; solved: boolean }) {
   return (
     <div className="mt-4">
-      <div className="relative mx-auto aspect-square w-full max-w-72 overflow-hidden rounded-2xl border-[3px] border-ink bg-[radial-gradient(circle,#fff6c8_0%,#ffd84a_55%,#f5a300_100%)] shadow-[inset_0_0_30px_rgb(0_0_0/0.25)]">
+      <div className="relative mx-auto aspect-square w-full max-w-72 overflow-hidden rounded-2xl border-4 border-ink bg-[radial-gradient(circle,#fff6c8_0%,#ffd84a_55%,#f5a300_100%)] shadow-[inset_0_0_30px_rgb(0_0_0/0.25),0_5px_0_var(--color-ink)]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img key={clue.image} src={clue.image} alt="Mystery brawler silhouette" className="size-full animate-pop object-contain" draggable={false} />
       </div>
       {!solved && (
         <div className="mt-3 flex items-center justify-center gap-1.5" aria-label={`Zoom level ${clue.level} of ${clue.maxLevel}`}>
           {Array.from({ length: clue.maxLevel }, (_, i) => (
-            <span key={i} className={`h-2.5 w-6 rounded-full border-2 border-ink ${i < clue.level ? "bg-gold" : "bg-white/20"}`} />
+            <span key={i} className={`h-3 w-7 -skew-x-12 rounded-[4px] border-[3px] border-ink ${i < clue.level ? "bg-gold" : "bg-white/20"}`} />
           ))}
         </div>
       )}
@@ -63,7 +63,7 @@ function EmojiClue({ clue }: { clue: Extract<ClueView, { mode: "emoji" }> }) {
         return (
           <div
             key={i}
-            className={`grid aspect-square w-14 place-items-center rounded-2xl border-[3px] border-ink text-3xl sm:w-16 sm:text-4xl ${e ? "animate-pop bg-white/95 shadow-[inset_0_-4px_0_rgb(0_0_0/0.15)]" : "bg-ink/40"}`}
+            className={`slant grid aspect-square w-14 place-items-center rounded-xl text-3xl sm:w-16 sm:text-4xl ${e ? "skin-white animate-pop" : "skin-ink"}`}
           >
             {e ?? <span className="stroke-text-sm text-2xl text-white/40">?</span>}
           </div>
@@ -78,16 +78,16 @@ function AbilityClue({ clue }: { clue: Extract<ClueView, { mode: "ability" }> })
   return (
     <div className="mt-4">
       <div
-        className={`mx-auto grid aspect-square w-40 place-items-center rounded-3xl border-[3px] border-ink shadow-[inset_0_-6px_0_rgb(0_0_0/0.2)] ${isGadget ? "bg-[radial-gradient(circle,#6ff28a,#1c9e3b)]" : "bg-[radial-gradient(circle,#ffe97a,#f0a000)]"}`}
+        className={`mx-auto grid aspect-square w-40 -rotate-3 place-items-center rounded-2xl border-4 border-ink shadow-[inset_0_4px_0_rgb(255_255_255/0.35),inset_0_-6px_0_rgb(0_0_0/0.2),0_6px_0_var(--color-ink)] ${isGadget ? "bg-[radial-gradient(circle,#6ff28a,#1c9e3b)]" : "bg-[radial-gradient(circle,#ffe97a,#f0a000)]"}`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={clue.image} alt={`Mystery ${clue.kind}`} className="size-28 object-contain drop-shadow-[0_4px_0_rgb(0_0_0/0.35)]" draggable={false} />
+        <img src={clue.image} alt={`Mystery ${clue.kind}`} className="size-28 rotate-3 object-contain drop-shadow-[0_4px_0_rgb(0_0_0/0.35)]" draggable={false} />
       </div>
       <div className="mt-3 space-y-2">
         {clue.name ? (
           <p className="stroke-text animate-pop text-xl text-gold">&ldquo;{clue.name}&rdquo;</p>
         ) : null}
-        {clue.description ? <p className="panel-dark animate-pop px-3 py-2 text-sm font-semibold text-white/90">{clue.description}</p> : null}
+        {clue.description ? <p className="panel-dark animate-pop px-3 py-2 text-sm font-medium text-white/90">{clue.description}</p> : null}
         {clue.nextHintIn ? (
           <p className="text-sm font-bold text-white/70">
             Next hint in {clue.nextHintIn} {clue.nextHintIn === 1 ? "miss" : "misses"}
