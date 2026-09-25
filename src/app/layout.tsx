@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Lilita_One, Nunito } from "next/font/google";
+import { Rubik, Unbounded } from "next/font/google";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { googleEnabled } from "@/lib/auth";
 import "./globals.css";
 
-const lilita = Lilita_One({ weight: "400", subsets: ["latin"], variable: "--font-lilita" });
-const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
+const unbounded = Unbounded({ subsets: ["latin"], variable: "--font-unbounded" });
+const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik" });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -25,7 +25,7 @@ export const viewport: Viewport = { themeColor: "#1a3aca", width: "device-width"
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${lilita.variable} ${nunito.variable}`}>
+    <html lang="en" className={`${unbounded.variable} ${rubik.variable}`}>
       <body className="flex min-h-dvh flex-col antialiased">
         <Header googleEnabled={googleEnabled} />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-4">{children}</main>
