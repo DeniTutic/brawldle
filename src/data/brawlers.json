@@ -1,0 +1,4559 @@
+[
+ {
+  "id": 16000027,
+  "name": "8-Bit",
+  "slug": "8-bit",
+  "rarity": "Super Rare",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Slow",
+  "range": "Very Long",
+  "releaseYear": 2019,
+  "hypercharge": "Aimbot",
+  "emojis": [
+   "🎮",
+   "🕹️",
+   "👾",
+   "📺",
+   "🤖"
+  ],
+  "abilities": [
+   {
+    "id": 23000259,
+    "kind": "Gadget",
+    "name": "Cheat Cartridge",
+    "description": "8-Bit instantly teleports to his Damage Booster."
+   },
+   {
+    "id": 23000318,
+    "kind": "Gadget",
+    "name": "Extra Credits",
+    "description": "8-Bit fires projectiles. Consumes ammo."
+   },
+   {
+    "id": 23000168,
+    "kind": "Star Power",
+    "name": "Boosted Booster",
+    "description": "Increases the Damage Booster's range by % and boosts damage by an additional %."
+   },
+   {
+    "id": 23000181,
+    "kind": "Star Power",
+    "name": "Plugged In",
+    "description": "While near the Damage Booster 8-Bit gains +% Movement Speed."
+   }
+  ]
+ },
+ {
+  "id": 16000095,
+  "name": "Alli",
+  "slug": "alli",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2025,
+  "hypercharge": "Swamp Snacking",
+  "emojis": [
+   "🔧",
+   "💕",
+   "🌿",
+   "😳",
+   "🐊"
+  ],
+  "abilities": [
+   {
+    "id": 23000991,
+    "kind": "Gadget",
+    "name": "Feed The Gators",
+    "description": "The next main attack heals Alli for x% of damage dealt."
+   },
+   {
+    "id": 23000992,
+    "kind": "Gadget",
+    "name": "Cold-Blooded",
+    "description": "Alli becomes enraged for the next x secs. Can only be activated when an enemy is visible."
+   },
+   {
+    "id": 23000989,
+    "kind": "Star Power",
+    "name": "Lizard Limbs",
+    "description": "While enraged Alli regenerates health faster out of combat after only x seconds."
+   },
+   {
+    "id": 23000990,
+    "kind": "Star Power",
+    "name": "You Better Run You Better Take Cover",
+    "description": "Alli reloads x% faster while enraged."
+   }
+  ]
+ },
+ {
+  "id": 16000040,
+  "name": "Amber",
+  "slug": "amber",
+  "rarity": "Legendary",
+  "role": "Controller",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2020,
+  "hypercharge": "Oil Spill",
+  "emojis": [
+   "💃",
+   "🛢️",
+   "🎪",
+   "🌋",
+   "🔥"
+  ],
+  "abilities": [
+   {
+    "id": 23000309,
+    "kind": "Gadget",
+    "name": "Fire Starters",
+    "description": "Amber summons an Oil barrel with health, spilling oil when destroyed."
+   },
+   {
+    "id": 23000488,
+    "kind": "Gadget",
+    "name": "Dancing Flames",
+    "description": "Amber creates orbiting flames around her for seconds, dealing damage on hit."
+   },
+   {
+    "id": 23000307,
+    "kind": "Star Power",
+    "name": "Wild Flames",
+    "description": "Amber's Fire Fluid becomes sticky, attaching to Brawlers and leaving a trail of oil while they move."
+   },
+   {
+    "id": 23000308,
+    "kind": "Star Power",
+    "name": "Scorchin Siphon",
+    "description": "Amber reloads % of her fire-breathing when an enemy takes fire damage."
+   }
+  ]
+ },
+ {
+  "id": 16000079,
+  "name": "Angelo",
+  "slug": "angelo",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Very Long",
+  "releaseYear": 2024,
+  "hypercharge": "In My Element",
+  "emojis": [
+   "🌿",
+   "💘",
+   "👼",
+   "🏹",
+   "🦟"
+  ],
+  "abilities": [
+   {
+    "id": 23000677,
+    "kind": "Gadget",
+    "name": "Stinging Flight",
+    "description": "Fly into the air for x seconds. Drains x health from nearby enemies on takeoff."
+   },
+   {
+    "id": 23000678,
+    "kind": "Gadget",
+    "name": "Master Fletcher",
+    "description": "The next Take Aim pierces enemies and the environment."
+   },
+   {
+    "id": 23000675,
+    "kind": "Star Power",
+    "name": "Empower",
+    "description": "Staying inside the Super will heal Angelo for x per second."
+   },
+   {
+    "id": 23000676,
+    "kind": "Star Power",
+    "name": "Flow",
+    "description": "Angelo gains % increased movement speed after entering water."
+   }
+  ]
+ },
+ {
+  "id": 16000051,
+  "name": "Ash",
+  "slug": "ash",
+  "rarity": "Epic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Short",
+  "releaseYear": 2021,
+  "hypercharge": "Rat King",
+  "emojis": [
+   "🧹",
+   "😡",
+   "🦺",
+   "🐀",
+   "🗑️"
+  ],
+  "abilities": [
+   {
+    "id": 23000416,
+    "kind": "Gadget",
+    "name": "Chill Pill",
+    "description": "Though furious, Ash has to collect himself. A full Rage meter will recover x health when this Gadget is popped - less Rage, less recovery."
+   },
+   {
+    "id": 23000465,
+    "kind": "Gadget",
+    "name": "Rotten Banana",
+    "description": "Ash loses x% health and instantly gains x% rage."
+   },
+   {
+    "id": 23000414,
+    "kind": "Star Power",
+    "name": "First Bash",
+    "description": "When hitting an opponent with his attack charges full, Ash gets even more angry. His Rage goes up by x%."
+   },
+   {
+    "id": 23000415,
+    "kind": "Star Power",
+    "name": "Mad As Heck",
+    "description": "Ash progressively gains up to x% faster reload speed, equal to how enraged he's become."
+   }
+  ]
+ },
+ {
+  "id": 16000006,
+  "name": "Barley",
+  "slug": "barley",
+  "rarity": "Rare",
+  "role": "Artillery",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Bottled-Up Rage",
+  "emojis": [
+   "🤖",
+   "🍸",
+   "🧪",
+   "🍾",
+   "🍷"
+  ],
+  "abilities": [
+   {
+    "id": 23000250,
+    "kind": "Gadget",
+    "name": "Sticky Syrup Mixer",
+    "description": "Barley drops a sticky concoction that leaves a puddle, slowing down all enemies that make contact with it."
+   },
+   {
+    "id": 23000293,
+    "kind": "Gadget",
+    "name": "Herbal Tonic",
+    "description": "Barley throws a healing potion at nearby allies that creates an area that heals for x health per second."
+   },
+   {
+    "id": 23000082,
+    "kind": "Star Power",
+    "name": "Medical Use",
+    "description": "Barley regains x health from each attack."
+   },
+   {
+    "id": 23000158,
+    "kind": "Star Power",
+    "name": "Extra Noxious",
+    "description": "Adds +x damage per second to Barley's attack."
+   }
+  ]
+ },
+ {
+  "id": 16000029,
+  "name": "Bea",
+  "slug": "bea",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2019,
+  "hypercharge": "Protect the Queen",
+  "emojis": [
+   "🌼",
+   "🎯",
+   "🍯",
+   "🧺",
+   "🐝"
+  ],
+  "abilities": [
+   {
+    "id": 23000271,
+    "kind": "Gadget",
+    "name": "Honey Molasses",
+    "description": "Bea drops a beehive with a splash of sticky honey around it. The honey slows down enemies that step in it."
+   },
+   {
+    "id": 23000312,
+    "kind": "Gadget",
+    "name": "Rattled Hive",
+    "description": "Bea unleashes x angry bees that circle away from her, dealing more damage the further they go (up to x damage)."
+   },
+   {
+    "id": 23000192,
+    "kind": "Star Power",
+    "name": "Insta Beaload",
+    "description": "Instantly Supercharge Bea's Big Sting one time if she misses a Supercharged shot."
+   },
+   {
+    "id": 23000193,
+    "kind": "Star Power",
+    "name": "Honeycomb",
+    "description": "Bea receives a x% shield while Big Sting is Supercharged."
+   }
+  ]
+ },
+ {
+  "id": 16000046,
+  "name": "Belle",
+  "slug": "belle",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2021,
+  "hypercharge": "Magnetic",
+  "emojis": [
+   "🤠",
+   "⚡",
+   "🎯",
+   "🔫",
+   "🌵"
+  ],
+  "abilities": [
+   {
+    "id": 23000371,
+    "kind": "Gadget",
+    "name": "Nest Egg",
+    "description": "Belle places a trap on the ground that will explode when triggered by an opponent. The trap deals damage, and slows down anyone within its blast radius for seconds."
+   },
+   {
+    "id": 23000463,
+    "kind": "Gadget",
+    "name": "Reverse Polarity",
+    "description": "Belle's next Electro-Bolt bounces from walls."
+   },
+   {
+    "id": 23000369,
+    "kind": "Star Power",
+    "name": "Positive Feedback",
+    "description": "Belle gains a x% shield whenever her Electro-Bolts hit a target."
+   },
+   {
+    "id": 23000370,
+    "kind": "Star Power",
+    "name": "Grounded",
+    "description": "Getting marked by Belle's Super prevents the opponent from reloading their attack for x seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000082,
+  "name": "Berry",
+  "slug": "berry",
+  "rarity": "Epic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2024,
+  "hypercharge": "Double Scoops",
+  "emojis": [
+   "🐴",
+   "🍬",
+   "😒",
+   "🍦",
+   "🦄"
+  ],
+  "abilities": [
+   {
+    "id": 23000766,
+    "kind": "Gadget",
+    "name": "Friendship Is Great",
+    "description": "Berry swipes his tail, knocking back enemies and healing nearby allies for x health."
+   },
+   {
+    "id": 23000767,
+    "kind": "Gadget",
+    "name": "Healthy Additives",
+    "description": "Berry's next main attack area lasts for x% longer."
+   },
+   {
+    "id": 23000764,
+    "kind": "Star Power",
+    "name": "Floor Is Fine",
+    "description": "Berry gains x% increased reload speed when standing on his own melted ice cream."
+   },
+   {
+    "id": 23000765,
+    "kind": "Star Power",
+    "name": "Making A Mess",
+    "description": "Berry's basic attack gains x% extra damage on impact in areas with no ice cream."
+   }
+  ]
+ },
+ {
+  "id": 16000026,
+  "name": "Bibi",
+  "slug": "bibi",
+  "rarity": "Epic",
+  "role": "Tank",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2019,
+  "hypercharge": "Out of Bounds",
+  "emojis": [
+   "🍬",
+   "🫧",
+   "⚾",
+   "🏏",
+   "🎀"
+  ],
+  "abilities": [
+   {
+    "id": 23000275,
+    "kind": "Gadget",
+    "name": "Vitamin Booster",
+    "description": "Bibi heals health per second for seconds."
+   },
+   {
+    "id": 23000458,
+    "kind": "Gadget",
+    "name": "Extra Sticky",
+    "description": "Bibi throws bubble gum that slows all enemies in it by %"
+   },
+   {
+    "id": 23000134,
+    "kind": "Star Power",
+    "name": "Home Run",
+    "description": "Bibi's movement speed is increased by % when her Home Run bar is fully charged."
+   },
+   {
+    "id": 23000146,
+    "kind": "Star Power",
+    "name": "Batting Stance",
+    "description": "When Bibi's Home run bar is fully charged, she shields herself from all damage by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000014,
+  "name": "Bo",
+  "slug": "bo",
+  "rarity": "Epic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Catch a Bear",
+  "emojis": [
+   "🌲",
+   "💣",
+   "🦅",
+   "🏹",
+   "👁️"
+  ],
+  "abilities": [
+   {
+    "id": 23000263,
+    "kind": "Gadget",
+    "name": "Super Totem",
+    "description": "Bo places a totem that increases allies' Super charging rate by %. The totem slowly loses its health over time."
+   },
+   {
+    "id": 23000289,
+    "kind": "Gadget",
+    "name": "Tripwire",
+    "description": "Bo triggers all of his mines after x seconds. During the delay the mines are completely undetectable to opponents."
+   },
+   {
+    "id": 23000090,
+    "kind": "Star Power",
+    "name": "Circling Eagle",
+    "description": "Bo spots enemies hidden in bushes from x% longer distance than normally."
+   },
+   {
+    "id": 23000148,
+    "kind": "Star Power",
+    "name": "Snare A Bear",
+    "description": "Instead of a knockback, Bo's traps now stun the enemy for x seconds!"
+   }
+  ]
+ },
+ {
+  "id": 16000106,
+  "name": "Bolt",
+  "slug": "bolt",
+  "rarity": "Epic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Very Slow",
+  "range": "Short",
+  "releaseYear": 2026,
+  "hypercharge": "Bowling Bolt",
+  "emojis": [
+   "🧸",
+   "⚙️",
+   "🎳",
+   "🏎️",
+   "⚡"
+  ],
+  "abilities": [
+   {
+    "id": 23000245,
+    "kind": "Gadget",
+    "name": "Rocket Laces",
+    "description": "Brock jumps to targeted area, knocking back nearby enemies on takeoff and landing and dealing minor damage."
+   },
+   {
+    "id": 23000316,
+    "kind": "Gadget",
+    "name": "Rocket Fuel",
+    "description": "Brock fires a large rocket that destroys terrain and deals damage"
+   },
+   {
+    "id": 23001281,
+    "kind": "Gadget",
+    "name": "Oil Change",
+    "description": "Bolt gains a x - x health shield based on his current speed."
+   },
+   {
+    "id": 23001282,
+    "kind": "Gadget",
+    "name": "Bouncy Ball",
+    "description": "Bolt jumps to a target location and deals area damage. Breaks environments but loses all speed when landing."
+   },
+   {
+    "id": 23001279,
+    "kind": "Star Power",
+    "name": "Toss Up",
+    "description": "Bolt will knock enemies upwards when he's at full speed."
+   },
+   {
+    "id": 23001280,
+    "kind": "Star Power",
+    "name": "Unstoppaball",
+    "description": "Bolt is immune to crowd control for seconds after activating his Super."
+   }
+  ]
+ },
+ {
+  "id": 16000058,
+  "name": "Bonnie",
+  "slug": "bonnie",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Slow",
+  "range": "Long",
+  "releaseYear": 2022,
+  "hypercharge": "Daredevil",
+  "emojis": [
+   "🎪",
+   "🎡",
+   "🧨",
+   "💥",
+   "🎯"
+  ],
+  "abilities": [
+   {
+    "id": 23000480,
+    "kind": "Gadget",
+    "name": "Sugar Rush",
+    "description": "Clyde's movement and reload speed are increased by % for seconds."
+   },
+   {
+    "id": 23000481,
+    "kind": "Gadget",
+    "name": "Crash Test",
+    "description": "Bonnie dashes forward, knocking back enemies and dealing x damage on hit."
+   },
+   {
+    "id": 23000478,
+    "kind": "Star Power",
+    "name": "Black Powder",
+    "description": "The range of Bonnie's Star Launcher is increased by x%."
+   },
+   {
+    "id": 23000479,
+    "kind": "Star Power",
+    "name": "Wisdom Tooth",
+    "description": "Loose Tooth shatters on hit, dealing x% extra damage to nearby enemies."
+   }
+  ]
+ },
+ {
+  "id": 16000003,
+  "name": "Brock",
+  "slug": "brock",
+  "rarity": "Rare",
+  "role": "Marksman",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Rocket Barrage",
+  "emojis": [
+   "📻",
+   "😎",
+   "🎆",
+   "💥",
+   "🚀"
+  ],
+  "abilities": [
+   {
+    "id": 23000245,
+    "kind": "Gadget",
+    "name": "Rocket Laces",
+    "description": "Brock jumps to targeted area, knocking back nearby enemies on takeoff and landing and dealing minor damage."
+   },
+   {
+    "id": 23000316,
+    "kind": "Gadget",
+    "name": "Rocket Fuel",
+    "description": "Brock fires a large rocket that destroys terrain and deals damage"
+   },
+   {
+    "id": 23000079,
+    "kind": "Star Power",
+    "name": "More Rockets",
+    "description": "Rocket Rain now rains down x% more rockets."
+   },
+   {
+    "id": 23000150,
+    "kind": "Star Power",
+    "name": "Rocket No. 4",
+    "description": "Brock loads a fourth rocket into his launcher, increasing his ammo capacity (and discarding the thermos bottle he's been keeping in his launcher's fourth tube)."
+   }
+  ]
+ },
+ {
+  "id": 16000002,
+  "name": "Bull",
+  "slug": "bull",
+  "rarity": "Rare",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2017,
+  "hypercharge": "Jaws of Steel",
+  "emojis": [
+   "🏍️",
+   "🔫",
+   "💪",
+   "😤",
+   "🐂"
+  ],
+  "abilities": [
+   {
+    "id": 23000272,
+    "kind": "Gadget",
+    "name": "T-Bone Missile",
+    "description": "Bull throws a projectile at the target Brawler, dealing damage and healing for if he hits."
+   },
+   {
+    "id": 23000310,
+    "kind": "Gadget",
+    "name": "Stomper",
+    "description": "Bull stomps the ground, slowing nearby enemies. If a target is already slowed, they are stunned!"
+   },
+   {
+    "id": 23000078,
+    "kind": "Star Power",
+    "name": "Berserker",
+    "description": "When Bull falls below x% health, his reload speed doubles!"
+   },
+   {
+    "id": 23000137,
+    "kind": "Star Power",
+    "name": "Tough Guy",
+    "description": "When Bull falls below x% health, he gains a shield that reduces all damage he takes by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000062,
+  "name": "Buster",
+  "slug": "buster",
+  "rarity": "Mythic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2022,
+  "hypercharge": "Plot Armor",
+  "emojis": [
+   "🍿",
+   "🔦",
+   "🛡️",
+   "🎥",
+   "🎬"
+  ],
+  "abilities": [
+   {
+    "id": 23000521,
+    "kind": "Gadget",
+    "name": "Utility Belt",
+    "description": "Buster heals himself and all nearby allies for x health for each ally in his Super's charge area."
+   },
+   {
+    "id": 23000522,
+    "kind": "Gadget",
+    "name": "Slo-Mo Replay",
+    "description": "Buster's next Lens Flare pulls enemies towards him."
+   },
+   {
+    "id": 23000519,
+    "kind": "Star Power",
+    "name": "Blockbuster",
+    "description": "Buster's Lens Flare deals x% more damage for each ally in his Super's charge area."
+   },
+   {
+    "id": 23000520,
+    "kind": "Star Power",
+    "name": "Kevlar Vest",
+    "description": "While Montage is active Buster takes x% less damage and is immune to knockbacks, slows and stuns."
+   }
+  ]
+ },
+ {
+  "id": 16000049,
+  "name": "Buzz",
+  "slug": "buzz",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2021,
+  "hypercharge": "Buzzwatch",
+  "emojis": [
+   "🦖",
+   "🌊",
+   "⏱️",
+   "🛟",
+   "🏊"
+  ],
+  "abilities": [
+   {
+    "id": 23000392,
+    "kind": "Gadget",
+    "name": "Reserve Buoy",
+    "description": "Instantly fills the Super meter, but the next Torpedo Throw doesn't stun opponents."
+   },
+   {
+    "id": 23000490,
+    "kind": "Gadget",
+    "name": "X-Ray-Shades",
+    "description": "Buzz can see into all bushes in his Super charging area for x seconds."
+   },
+   {
+    "id": 23000390,
+    "kind": "Star Power",
+    "name": "Tougher Torpedo",
+    "description": "The minimum duration of Buzz's Super stun is increased by x seconds."
+   },
+   {
+    "id": 23000391,
+    "kind": "Star Power",
+    "name": "Eyes Sharp",
+    "description": "Buzz's Super charging area is increased by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000042,
+  "name": "Byron",
+  "slug": "byron",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2020,
+  "hypercharge": "Unstable Concoction",
+  "emojis": [
+   "🧪",
+   "💉",
+   "🎩",
+   "🐍",
+   "💊"
+  ],
+  "abilities": [
+   {
+    "id": 23000333,
+    "kind": "Gadget",
+    "name": "Shot In The Arm",
+    "description": "Byron uses one of his shots to heal himself x per second for x seconds."
+   },
+   {
+    "id": 23000461,
+    "kind": "Gadget",
+    "name": "Booster Shots",
+    "description": "Byron's next attack shoots x darts instead of one, each dealing x% less damage and x% less healing."
+   },
+   {
+    "id": 23000331,
+    "kind": "Star Power",
+    "name": "Malaise",
+    "description": "Byron's Super will also cause opponents to receive x% less healing from any source for x seconds."
+   },
+   {
+    "id": 23000332,
+    "kind": "Star Power",
+    "name": "Injection",
+    "description": "Every x seconds the next basic attack will pierce through targets."
+   }
+  ]
+ },
+ {
+  "id": 16000025,
+  "name": "Carl",
+  "slug": "carl",
+  "rarity": "Super Rare",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2019,
+  "hypercharge": "Flamespin",
+  "emojis": [
+   "🤖",
+   "💎",
+   "🚃",
+   "🪃",
+   "⛏️"
+  ],
+  "abilities": [
+   {
+    "id": 23000262,
+    "kind": "Gadget",
+    "name": "Heat Ejector",
+    "description": "The next pickaxe Carl throws will drop a trail of hot rocks behind it! Opponents that touch them are set on fire and receive x damage per second."
+   },
+   {
+    "id": 23000317,
+    "kind": "Gadget",
+    "name": "Flying Hook",
+    "description": "Carl's next attack makes his pickaxe pull him to the farthest point of the attack."
+   },
+   {
+    "id": 23000129,
+    "kind": "Star Power",
+    "name": "Power Throw",
+    "description": "Carl throws his Pickaxe with x% more speed, allowing it to travel and return faster."
+   },
+   {
+    "id": 23000145,
+    "kind": "Star Power",
+    "name": "Protective Pirouette",
+    "description": "During Carl's Super, all damage he receives is reduced by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000074,
+  "name": "Charlie",
+  "slug": "charlie",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2023,
+  "hypercharge": "Pestilence",
+  "emojis": [
+   "🎪",
+   "🪀",
+   "🕸️",
+   "🤡",
+   "🕷️"
+  ],
+  "abilities": [
+   {
+    "id": 23000625,
+    "kind": "Gadget",
+    "name": "Spiders",
+    "description": "Charlie releases x spiders that seek and attack the nearest enemies."
+   },
+   {
+    "id": 23000626,
+    "kind": "Gadget",
+    "name": "Personal Space",
+    "description": "Charlie cocoons herself, healing x% of her total health."
+   },
+   {
+    "id": 23000623,
+    "kind": "Star Power",
+    "name": "Digestive",
+    "description": "Cocooned enemies lose x% of their health while cocooned."
+   },
+   {
+    "id": 23000624,
+    "kind": "Star Power",
+    "name": "Slimy",
+    "description": "Cocoon leaves a slimy trail behind it for x seconds that slows down enemies walking over it."
+   }
+  ]
+ },
+ {
+  "id": 16000063,
+  "name": "Chester",
+  "slug": "chester",
+  "rarity": "Legendary",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2022,
+  "hypercharge": "Crunchy",
+  "emojis": [
+   "🎲",
+   "🔔",
+   "🍬",
+   "🤹",
+   "🃏"
+  ],
+  "abilities": [
+   {
+    "id": 23000529,
+    "kind": "Gadget",
+    "name": "Spicy Dice",
+    "description": "Chester gets a new random Super that is different from his current one."
+   },
+   {
+    "id": 23000530,
+    "kind": "Gadget",
+    "name": "Candy Beans",
+    "description": "Chester eats a mystery flavored candy bean from his cap, gaining a random buff for x seconds."
+   },
+   {
+    "id": 23000527,
+    "kind": "Star Power",
+    "name": "Single Bellomania",
+    "description": "The first bell of Chester's attack sequence does x% damage."
+   },
+   {
+    "id": 23000528,
+    "kind": "Star Power",
+    "name": "Sneak Peek",
+    "description": "Chester will always know what his next Super will be."
+   }
+  ]
+ },
+ {
+  "id": 16000073,
+  "name": "Chuck",
+  "slug": "chuck",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2023,
+  "hypercharge": "Full Steam Ahead!",
+  "emojis": [
+   "👻",
+   "🎫",
+   "🛤️",
+   "🚉",
+   "🚂"
+  ],
+  "abilities": [
+   {
+    "id": 23000611,
+    "kind": "Gadget",
+    "name": "Rerouting",
+    "description": "Chuck removes the nearest Post and charges % of his Super."
+   },
+   {
+    "id": 23000612,
+    "kind": "Gadget",
+    "name": "Ghost Train",
+    "description": "Chuck's Supers can go through walls for seconds!"
+   },
+   {
+    "id": 23000609,
+    "kind": "Star Power",
+    "name": "Pit Stop",
+    "description": "Placing a Pole slows % any hit enemy for sec."
+   },
+   {
+    "id": 23000610,
+    "kind": "Star Power",
+    "name": "Tickets Please",
+    "description": "Dashing through enemies with his Super will also steal % of their ammo."
+   }
+  ]
+ },
+ {
+  "id": 16000083,
+  "name": "Clancy",
+  "slug": "clancy",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2024,
+  "hypercharge": "Recall of Duty",
+  "emojis": [
+   "🎖️",
+   "🪖",
+   "🌊",
+   "🔫",
+   "🦞"
+  ],
+  "abilities": [
+   {
+    "id": 23000774,
+    "kind": "Gadget",
+    "name": "Snappy Shooting",
+    "description": "Clancy gains double tokens for x seconds."
+   },
+   {
+    "id": 23000775,
+    "kind": "Gadget",
+    "name": "Tactical Retreat",
+    "description": "Clancy dashes and reloads x ammo"
+   },
+   {
+    "id": 23000772,
+    "kind": "Star Power",
+    "name": "Recon",
+    "description": "Clancy starts the match with x tokens."
+   },
+   {
+    "id": 23000773,
+    "kind": "Star Power",
+    "name": "Pumping Up",
+    "description": "Clancy reloads all of his ammo on every enemy takedown."
+   }
+  ]
+ },
+ {
+  "id": 16000039,
+  "name": "Colette",
+  "slug": "colette",
+  "rarity": "Epic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2020,
+  "hypercharge": "Teen Spirit",
+  "emojis": [
+   "🎁",
+   "🛍️",
+   "📓",
+   "📸",
+   "😍"
+  ],
+  "abilities": [
+   {
+    "id": 23000302,
+    "kind": "Gadget",
+    "name": "Na-Ah",
+    "description": "Colette fires a projectile that charms a Brawler for sec. Uses ammo."
+   },
+   {
+    "id": 23000457,
+    "kind": "Gadget",
+    "name": "Gotcha",
+    "description": "Colette fires a projectile that heals for % of damage dealt. Uses ammo and can be fired 3 times before cooldown."
+   },
+   {
+    "id": 23000300,
+    "kind": "Star Power",
+    "name": "Push It",
+    "description": "All enemy Brawlers hit by Colette's charge are carried to the farthest point of the attack! At max distance, they are stunned for sec."
+   },
+   {
+    "id": 23000301,
+    "kind": "Star Power",
+    "name": "Mass Tax",
+    "description": "Colette takes % less damage during her Super and gains 30% shield for 3 sec if she hits a Brawler."
+   }
+  ]
+ },
+ {
+  "id": 16000001,
+  "name": "Colt",
+  "slug": "colt",
+  "rarity": "Rare",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Dual Wielding",
+  "emojis": [
+   "💇",
+   "🌟",
+   "🤠",
+   "🥾",
+   "🔫"
+  ],
+  "abilities": [
+   {
+    "id": 23000273,
+    "kind": "Gadget",
+    "name": "Speedloader",
+    "description": "Colt fires two quick shots that slow targets. Deals damage."
+   },
+   {
+    "id": 23000319,
+    "kind": "Gadget",
+    "name": "Silver Bullet",
+    "description": "Colt fires a bullet that destroys the environment and pierces Brawlers. Deals damage. Consumes ammo."
+   },
+   {
+    "id": 23000077,
+    "kind": "Star Power",
+    "name": "Slick Boots",
+    "description": "Colt's movement speed is increased by %."
+   },
+   {
+    "id": 23000138,
+    "kind": "Star Power",
+    "name": "Magnum Special",
+    "description": "Colt's attack range and bullet speed are increased by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000070,
+  "name": "Cordelius",
+  "slug": "cordelius",
+  "rarity": "Legendary",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Normal",
+  "releaseYear": 2023,
+  "hypercharge": "Complete Darkness",
+  "emojis": [
+   "🌲",
+   "🌑",
+   "👤",
+   "🎩",
+   "🍄"
+  ],
+  "abilities": [
+   {
+    "id": 23000587,
+    "kind": "Gadget",
+    "name": "Replanting",
+    "description": "Cordelius jumps over a piece of terrain quickly."
+   },
+   {
+    "id": 23000588,
+    "kind": "Gadget",
+    "name": "Poison Mushroom",
+    "description": "Cordelius's next main attack shoots a poison mushroom that prevents the enemy from attacking for x seconds."
+   },
+   {
+    "id": 23000585,
+    "kind": "Star Power",
+    "name": "Comboshrooms",
+    "description": "Hitting the second mushroom to the same target as the first, deals x% extra damage."
+   },
+   {
+    "id": 23000586,
+    "kind": "Star Power",
+    "name": "Mushroom Kingdom",
+    "description": "Cordelius spawns x mushrooms to the Shadow Realm after using his Super, healing allies and damaging enemies for x health on pickup."
+   }
+  ]
+ },
+ {
+  "id": 16000012,
+  "name": "Crow",
+  "slug": "crow",
+  "rarity": "Legendary",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Utility Knives",
+  "emojis": [
+   "🖤",
+   "☠️",
+   "🗡️",
+   "🧪",
+   "🐦"
+  ],
+  "abilities": [
+   {
+    "id": 23000243,
+    "kind": "Gadget",
+    "name": "Instapoison",
+    "description": "Crow instantly deals remaining poison damage to all Crow-poisoned enemies and gains a shield for % of the value."
+   },
+   {
+    "id": 23000286,
+    "kind": "Gadget",
+    "name": "Slowing Toxin",
+    "description": "Throw a kunai that damages, slows and poisons the first enemy hit for sec."
+   },
+   {
+    "id": 23000088,
+    "kind": "Star Power",
+    "name": "Extra Toxic",
+    "description": "Crow's poison saps the strength of enemies, who deal x% less damage while poisoned."
+   },
+   {
+    "id": 23000143,
+    "kind": "Star Power",
+    "name": "Carrion Crow",
+    "description": "Crow deals +x% damage with his attack and Super to targets with x% or less health."
+   }
+  ]
+ },
+ {
+  "id": 16000104,
+  "name": "Damian",
+  "slug": "damian",
+  "rarity": "Mythic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2026,
+  "hypercharge": "Jump in the Fire",
+  "emojis": [
+   "🎶",
+   "😡",
+   "🎤",
+   "💥",
+   "🐉"
+  ],
+  "abilities": [
+   {
+    "id": 23001247,
+    "kind": "Gadget",
+    "name": "Spiritual Healing",
+    "description": "Damian throws his microphone to a target location. The first teammate to pick it up is healed for health."
+   },
+   {
+    "id": 23001248,
+    "kind": "Gadget",
+    "name": "Wall Of Sound",
+    "description": "Damian summons a temporary wall of indestructible amps!"
+   },
+   {
+    "id": 23001245,
+    "kind": "Star Power",
+    "name": "Crowdkill",
+    "description": "Knocking a target into a wall stuns them for sec."
+   },
+   {
+    "id": 23001246,
+    "kind": "Star Power",
+    "name": "Vulgar Display Of Punch",
+    "description": "Damian has a flaming fist during his Super, which burns enemies."
+   }
+  ]
+ },
+ {
+  "id": 16000018,
+  "name": "Darryl",
+  "slug": "darryl",
+  "rarity": "Super Rare",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2017,
+  "hypercharge": "Barrel o' Bullets",
+  "emojis": [
+   "🏴‍☠️",
+   "🤖",
+   "🌀",
+   "🔫",
+   "🛢️"
+  ],
+  "abilities": [
+   {
+    "id": 23000260,
+    "kind": "Gadget",
+    "name": "Recoiling Rotator",
+    "description": "Darryl spins around and sprays a barrage of shots in all directions. Each shot deals x damage and recharges his Super by x% if it hits enemies!"
+   },
+   {
+    "id": 23000313,
+    "kind": "Gadget",
+    "name": "Tar Barrel",
+    "description": "Darryl creates a slowing area around himself for x seconds."
+   },
+   {
+    "id": 23000094,
+    "kind": "Star Power",
+    "name": "Steel Hoops",
+    "description": "After Barrel Roll all damage Darryl takes is reduced by x% for x seconds."
+   },
+   {
+    "id": 23000157,
+    "kind": "Star Power",
+    "name": "Rolling Reload",
+    "description": "When Darryl uses his Super, he doubles his reload speed for x seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000071,
+  "name": "Doug",
+  "slug": "doug",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2023,
+  "hypercharge": "Free Toppings",
+  "emojis": [
+   "🍔",
+   "😁",
+   "💚",
+   "🍞",
+   "🌭"
+  ],
+  "abilities": [
+   {
+    "id": 23000595,
+    "kind": "Gadget",
+    "name": "Double Sausage",
+    "description": "The next Snack Attack only heals allies but doubles the amount."
+   },
+   {
+    "id": 23000596,
+    "kind": "Gadget",
+    "name": "Extra Mustard",
+    "description": "The next Snack Attack only damages enemies but doubles the amount."
+   },
+   {
+    "id": 23000593,
+    "kind": "Star Power",
+    "name": "Fast Food",
+    "description": "When Doug revives an ally successfully, he will heal for x% of his max health."
+   },
+   {
+    "id": 23000594,
+    "kind": "Star Power",
+    "name": "Self Service",
+    "description": "Snack Attack also heals Doug by x."
+   }
+  ]
+ },
+ {
+  "id": 16000080,
+  "name": "Draco",
+  "slug": "draco",
+  "rarity": "Legendary",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Short",
+  "releaseYear": 2024,
+  "hypercharge": "Fire and Flames",
+  "emojis": [
+   "🤘",
+   "🔥",
+   "🛡️",
+   "🎸",
+   "🐉"
+  ],
+  "abilities": [
+   {
+    "id": 23000736,
+    "kind": "Gadget",
+    "name": "Upper Cut",
+    "description": "The next Lance Stab also throws enemies in the air for a short time."
+   },
+   {
+    "id": 23000737,
+    "kind": "Gadget",
+    "name": "Last Stand",
+    "description": "Draco can not fall under one health for x seconds."
+   },
+   {
+    "id": 23000734,
+    "kind": "Star Power",
+    "name": "Expose",
+    "description": "Every x seconds, the next Lance Stab exposes enemies on hit. Exposed enemies take x% increased damage for x seconds."
+   },
+   {
+    "id": 23000735,
+    "kind": "Star Power",
+    "name": "Shredding",
+    "description": "Dragon Solo now also heals for x when activated."
+   }
+  ]
+ },
+ {
+  "id": 16000009,
+  "name": "Dynamike",
+  "slug": "dynamike",
+  "rarity": "Super Rare",
+  "role": "Artillery",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Boomer",
+  "emojis": [
+   "👴",
+   "⛏️",
+   "🛢️",
+   "💥",
+   "🧨"
+  ],
+  "abilities": [
+   {
+    "id": 23000258,
+    "kind": "Gadget",
+    "name": "Fidget Spinner",
+    "description": "Dynamike spins furiously with % increased movement speed and throws multiple sticks of dynamite around himself. Each dynamite deals damage to enemies."
+   },
+   {
+    "id": 23000294,
+    "kind": "Gadget",
+    "name": "Satchel Charge",
+    "description": "Once activated, the next main attack also stuns enemies for x seconds."
+   },
+   {
+    "id": 23000085,
+    "kind": "Star Power",
+    "name": "Dyna-Jump",
+    "description": "Dynamike can ride the blast wave of his explosives to jump over obstacles!"
+   },
+   {
+    "id": 23000155,
+    "kind": "Star Power",
+    "name": "Demolition",
+    "description": "Adds +x damage to Mike's Super."
+   }
+  ]
+ },
+ {
+  "id": 16000043,
+  "name": "Edgar",
+  "slug": "edgar",
+  "rarity": "Epic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2020,
+  "hypercharge": "Outburst",
+  "emojis": [
+   "🖤",
+   "🧣",
+   "😒",
+   "🦘",
+   "👊"
+  ],
+  "abilities": [
+   {
+    "id": 23000340,
+    "kind": "Gadget",
+    "name": "Lets Fly",
+    "description": "Edgar's scarf grabs the closest Brawler and he jumps behind them. His scarf can also pull him towards walls."
+   },
+   {
+    "id": 23000403,
+    "kind": "Gadget",
+    "name": "Hardcore",
+    "description": "Edgar gets a shield that protects him from the next damage. The shield gets weaker over time."
+   },
+   {
+    "id": 23000338,
+    "kind": "Star Power",
+    "name": "Hard Landing",
+    "description": "Edgar's Super and Let's Fly Gadget will also deal damage to nearby enemies upon landing, or damage on a direct hit."
+   },
+   {
+    "id": 23000339,
+    "kind": "Star Power",
+    "name": "Fisticuffs",
+    "description": "Edgar receives % more healing from damage he deals."
+   }
+  ]
+ },
+ {
+  "id": 16000010,
+  "name": "El Primo",
+  "slug": "el-primo",
+  "rarity": "Rare",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2017,
+  "hypercharge": "Gravity Leap",
+  "emojis": [
+   "🌮",
+   "☄️",
+   "💪",
+   "🔥",
+   "🤼"
+  ],
+  "abilities": [
+   {
+    "id": 23000264,
+    "kind": "Gadget",
+    "name": "Suplex Supplement",
+    "description": "El Primo Dashes, grabbing any hit enemies and suplexing them behind him."
+   },
+   {
+    "id": 23000292,
+    "kind": "Gadget",
+    "name": "Asteroid Belt",
+    "description": "El primo flexes his pecs and destroys any incoming projectiles for sec."
+   },
+   {
+    "id": 23000086,
+    "kind": "Star Power",
+    "name": "El Fuego",
+    "description": "Enemies caught in El Primo's Super will burn for x damage over 4 seconds."
+   },
+   {
+    "id": 23000140,
+    "kind": "Star Power",
+    "name": "Meteor Rush",
+    "description": "El Primo gains a % speed boost for seconds after using his Super."
+   }
+  ]
+ },
+ {
+  "id": 16000030,
+  "name": "Emz",
+  "slug": "emz",
+  "rarity": "Epic",
+  "role": "Controller",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2019,
+  "hypercharge": "Overhyped Haze",
+  "emojis": [
+   "📱",
+   "🤳",
+   "🧟‍♀️",
+   "💨",
+   "💅"
+  ],
+  "abilities": [
+   {
+    "id": 23000274,
+    "kind": "Gadget",
+    "name": "Friendzoner",
+    "description": "Emz fires off some hairspray that pushes enemies back. Deals damage."
+   },
+   {
+    "id": 23000459,
+    "kind": "Gadget",
+    "name": "Acid Spray",
+    "description": "Emz squirts out hairspray that goes through walls! Deals damage."
+   },
+   {
+    "id": 23000198,
+    "kind": "Star Power",
+    "name": "Bad Karma",
+    "description": "Enemies that stay within the cloud of Emz's toxic hair spray suffer increasing damage, x% per hit."
+   },
+   {
+    "id": 23000199,
+    "kind": "Star Power",
+    "name": "Hype",
+    "description": "Emz recovers x health per second for each enemy Brawler inside her Super's area of effect."
+   }
+  ]
+ },
+ {
+  "id": 16000056,
+  "name": "Eve",
+  "slug": "eve",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2022,
+  "hypercharge": "Generations",
+  "emojis": [
+   "🥚",
+   "🛸",
+   "👩‍👧",
+   "🌊",
+   "👽"
+  ],
+  "abilities": [
+   {
+    "id": 23000454,
+    "kind": "Gadget",
+    "name": "Gotta Go",
+    "description": "Eve jumps away and leaves behind a hatchling."
+   },
+   {
+    "id": 23000455,
+    "kind": "Gadget",
+    "name": "Motherly Love",
+    "description": "Hatchlings spawned from an active big egg will now heal allies over time instead of dealing damage."
+   },
+   {
+    "id": 23000452,
+    "kind": "Star Power",
+    "name": "Unnatural Order",
+    "description": "Reverses the order of the eggs shot by her Egg Shooter."
+   },
+   {
+    "id": 23000453,
+    "kind": "Star Power",
+    "name": "Happy Surprise",
+    "description": "Every x seconds, the next largest egg hitting an enemy of her Egg Shooter will spawn a hatchling."
+   }
+  ]
+ },
+ {
+  "id": 16000054,
+  "name": "Fang",
+  "slug": "fang",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2022,
+  "hypercharge": "Dragon Kick",
+  "emojis": [
+   "🎬",
+   "🍿",
+   "🥋",
+   "👟",
+   "🦵"
+  ],
+  "abilities": [
+   {
+    "id": 23000440,
+    "kind": "Gadget",
+    "name": "Corn-Fu",
+    "description": "Fang tosses a handful of corn kernels into the air, making it rain popcorn! Each kernel pop deals x damage."
+   },
+   {
+    "id": 23000464,
+    "kind": "Gadget",
+    "name": "Roundhouse Kick",
+    "description": "Fang spins and hits all enemies around him, stunning them for x seconds."
+   },
+   {
+    "id": 23000438,
+    "kind": "Star Power",
+    "name": "Fresh Kicks",
+    "description": "When Fang defeats an enemy Brawler with his Super, it's recharged instantly, allowing him to use his Super again!"
+   },
+   {
+    "id": 23000439,
+    "kind": "Star Power",
+    "name": "Divine Soles",
+    "description": "Reduce x damage from incoming hits once every x seconds. Maximum reduction is x% of the incoming damage."
+   }
+  ]
+ },
+ {
+  "id": 16000092,
+  "name": "Finx",
+  "slug": "finx",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2025,
+  "hypercharge": "Temporal Traveling",
+  "emojis": [
+   "🗝️",
+   "🐈",
+   "🔺",
+   "🏺",
+   "⏳"
+  ],
+  "abilities": [
+   {
+    "id": 23000917,
+    "kind": "Gadget",
+    "name": "Back To The Finxture",
+    "description": "Finx steps back in time, returning to the position and ammo he had x seconds ago."
+   },
+   {
+    "id": 23000918,
+    "kind": "Gadget",
+    "name": "No Escape",
+    "description": "Finx's next projectiles from his main attack freeze the enemies in time for x seconds, making them unable to take actions for the duration, but also making them immune to any damage."
+   },
+   {
+    "id": 23000915,
+    "kind": "Star Power",
+    "name": "Hieroglyph Halt",
+    "description": "Finx reduces the reload speed of any enemy Brawlers hit by his main attack by % for seconds."
+   },
+   {
+    "id": 23000916,
+    "kind": "Star Power",
+    "name": "Primer",
+    "description": "Damage dealt only from Finx's projectiles that are sped up by Time Warp, will increase the Super duration by x seconds each."
+   }
+  ]
+ },
+ {
+  "id": 16000020,
+  "name": "Frank",
+  "slug": "frank",
+  "rarity": "Epic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2018,
+  "hypercharge": "Seismic Smash",
+  "emojis": [
+   "🎧",
+   "🧟",
+   "⚡",
+   "💀",
+   "🔨"
+  ],
+  "abilities": [
+   {
+    "id": 23000261,
+    "kind": "Gadget",
+    "name": "Active Noise Canceling",
+    "description": "Fires a soundwave in a target direction, dealing damage to Brawlers. Frank becomes immune to Crowd Control for secs."
+   },
+   {
+    "id": 23000351,
+    "kind": "Gadget",
+    "name": "Irresistible Attraction",
+    "description": "Frank aims a long-range attack that pulls enemies towards him. Consumes ammo. Does damage."
+   },
+   {
+    "id": 23000104,
+    "kind": "Star Power",
+    "name": "Power Grab",
+    "description": "Frank steals the power of a Brawler he defeats, increasing his damage by x% for x seconds!"
+   },
+   {
+    "id": 23000153,
+    "kind": "Star Power",
+    "name": "Sponge",
+    "description": "Frank gains +x health."
+   }
+  ]
+ },
+ {
+  "id": 16000035,
+  "name": "Gale",
+  "slug": "gale",
+  "rarity": "Epic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2020,
+  "hypercharge": "Blizzard",
+  "emojis": [
+   "👴",
+   "🌬️",
+   "❄️",
+   "🧹",
+   "⛄"
+  ],
+  "abilities": [
+   {
+    "id": 23000277,
+    "kind": "Gadget",
+    "name": "Spring Ejector",
+    "description": "Gale drops a bounce pad underfoot, launching friend and foe alike into the air."
+   },
+   {
+    "id": 23000407,
+    "kind": "Gadget",
+    "name": "Twister",
+    "description": "Gale uses his leaf blower to create a local tornado, which will push away any opponents that try to pass through."
+   },
+   {
+    "id": 23000228,
+    "kind": "Star Power",
+    "name": "Blustery Blow",
+    "description": "Gale's Super now stuns enemies for x seconds if they are pushed against obstacles."
+   },
+   {
+    "id": 23000229,
+    "kind": "Star Power",
+    "name": "Freezing Snow",
+    "description": "Gale's snow balls now also slow down opponents for seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000021,
+  "name": "Gene",
+  "slug": "gene",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2019,
+  "hypercharge": "Hyper Hands",
+  "emojis": [
+   "✨",
+   "💨",
+   "✋",
+   "🪔",
+   "🧞"
+  ],
+  "abilities": [
+   {
+    "id": 23000252,
+    "kind": "Gadget",
+    "name": "Lamp Blowout",
+    "description": "All enemies close to Gene are instantly pushed back. If at least one enemy Brawler is within range, Gene will also restore x% of his max health."
+   },
+   {
+    "id": 23000352,
+    "kind": "Gadget",
+    "name": "Vengeful Spirits",
+    "description": "Gene shoots a homing missile at all visible opponents within a large area, dealing up to x damage based on distance."
+   },
+   {
+    "id": 23000109,
+    "kind": "Star Power",
+    "name": "Magic Puffs",
+    "description": "Gene heals all friendly Brawlers around him for x health per second."
+   },
+   {
+    "id": 23000159,
+    "kind": "Star Power",
+    "name": "Spirit Slap",
+    "description": "Gene's Magic Hand also damages enemies, dealing x damage on hit."
+   }
+  ]
+ },
+ {
+  "id": 16000100,
+  "name": "Gigi",
+  "slug": "gigi",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2025,
+  "hypercharge": "Pas de Deux",
+  "emojis": [
+   "🔮",
+   "🧤",
+   "🧵",
+   "💃",
+   "🪆"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000101,
+  "name": "Glowy",
+  "slug": "glowy",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2026,
+  "hypercharge": "You Need a Friend",
+  "emojis": [
+   "🔬",
+   "🐠",
+   "🌊",
+   "💡",
+   "🐡"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000064,
+  "name": "Gray",
+  "slug": "gray",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2022,
+  "hypercharge": "Another Dimension",
+  "emojis": [
+   "🤐",
+   "🎩",
+   "🌀",
+   "🚪",
+   "🎭"
+  ],
+  "abilities": [
+   {
+    "id": 23000537,
+    "kind": "Gadget",
+    "name": "Walking Cane",
+    "description": "Gray's next hit from the Finger Pistol shoots a walking cane which pulls enemies back by a bit."
+   },
+   {
+    "id": 23000538,
+    "kind": "Gadget",
+    "name": "Grand Piano",
+    "description": "Gray's next hit from the Finger Pistol will also leave a target on the ground where a piano will land and hurt enemies.It would be too bad if someone would get hurt, right?"
+   },
+   {
+    "id": 23000535,
+    "kind": "Star Power",
+    "name": "Fake Injury",
+    "description": "When Gray has full health, the next damage taken is reduced by %."
+   },
+   {
+    "id": 23000536,
+    "kind": "Star Power",
+    "name": "New Perspective",
+    "description": "When Gray or his Allies use Doors, they recover % of their max hit points."
+   }
+  ]
+ },
+ {
+  "id": 16000050,
+  "name": "Griff",
+  "slug": "griff",
+  "rarity": "Epic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "Tax Rebate",
+  "emojis": [
+   "🏪",
+   "💸",
+   "🤑",
+   "🪙",
+   "💰"
+  ],
+  "abilities": [
+   {
+    "id": 23000399,
+    "kind": "Gadget",
+    "name": "Piggy Bank",
+    "description": "Griff throws a firecracker-filled piggy bank that explodes after a short delay, destroying obstacles and dealing damage to opponents within range."
+   },
+   {
+    "id": 23000487,
+    "kind": "Gadget",
+    "name": "Coin Shower",
+    "description": "Griff throws a shower of coins at target area, dealing damage per sec to opponents inside."
+   },
+   {
+    "id": 23000397,
+    "kind": "Star Power",
+    "name": "Keep The Change",
+    "description": "Griff gains a slightly wider attack and adds another row of coins to the coin toss."
+   },
+   {
+    "id": 23000398,
+    "kind": "Star Power",
+    "name": "Business Resilience",
+    "description": "Every seconds, Griff regains up to % of his missing health."
+   }
+  ]
+ },
+ {
+  "id": 16000048,
+  "name": "Grom",
+  "slug": "grom",
+  "rarity": "Epic",
+  "role": "Artillery",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "Grom Bomb Goes Boom!",
+  "emojis": [
+   "🔧",
+   "📻",
+   "➕",
+   "💣",
+   "💥"
+  ],
+  "abilities": [
+   {
+    "id": 23000385,
+    "kind": "Gadget",
+    "name": "Watchtower",
+    "description": "Grom ejects a Watchtower from his Grom Bomb that gives all allies sight into bushes over a large area. The watchtower slowly loses health over time."
+   },
+   {
+    "id": 23000460,
+    "kind": "Gadget",
+    "name": "Radio Check",
+    "description": "Grom's next attack throws x Buds in rapid succession."
+   },
+   {
+    "id": 23000383,
+    "kind": "Star Power",
+    "name": "Foot Patrol",
+    "description": "When Grom's Super is fully charged, he gains +% faster movement speed!"
+   },
+   {
+    "id": 23000384,
+    "kind": "Star Power",
+    "name": "X-Factor",
+    "description": "The split from Grom's main attack deals up to +x% extra damage at max distance."
+   }
+  ]
+ },
+ {
+  "id": 16000061,
+  "name": "Gus",
+  "slug": "gus",
+  "rarity": "Super Rare",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2022,
+  "hypercharge": "Spooky Pop",
+  "emojis": [
+   "🚉",
+   "🧒",
+   "💙",
+   "👻",
+   "🎈"
+  ],
+  "abilities": [
+   {
+    "id": 23000513,
+    "kind": "Gadget",
+    "name": "Kooky Popper",
+    "description": "Explode all uncollected spirits, dealing x damage to nearby enemies."
+   },
+   {
+    "id": 23000514,
+    "kind": "Gadget",
+    "name": "Knockback Spirit",
+    "description": "Gus throws a spirit, knocking back enemies and dealing damage."
+   },
+   {
+    "id": 23000511,
+    "kind": "Star Power",
+    "name": "Health Bonanza",
+    "description": "Healing gained from spirits is increased by x%."
+   },
+   {
+    "id": 23000512,
+    "kind": "Star Power",
+    "name": "Spirit Animal",
+    "description": "Spooky increases the damage of a teammate by % for seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000069,
+  "name": "Hank",
+  "slug": "hank",
+  "rarity": "Epic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Short",
+  "releaseYear": 2023,
+  "hypercharge": "Homing Fish-iles",
+  "emojis": [
+   "🎖️",
+   "🫧",
+   "🪖",
+   "💥",
+   "🐠"
+  ],
+  "abilities": [
+   {
+    "id": 23000579,
+    "kind": "Gadget",
+    "name": "Water Balloons",
+    "description": "The next Balloon Blast also slows down enemies for x seconds."
+   },
+   {
+    "id": 23000580,
+    "kind": "Gadget",
+    "name": "Barricade",
+    "description": "Hank takes x% reduced damage for x seconds."
+   },
+   {
+    "id": 23000577,
+    "kind": "Star Power",
+    "name": "Its Gonna Blow",
+    "description": "When Balloon Blast is charged over %, Hank gains % extra movement speed."
+   },
+   {
+    "id": 23000578,
+    "kind": "Star Power",
+    "name": "Take Cover",
+    "description": "Hank takes x% less damage when near a wall."
+   }
+  ]
+ },
+ {
+  "id": 16000034,
+  "name": "Jacky",
+  "slug": "jacky",
+  "rarity": "Super Rare",
+  "role": "Tank",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2020,
+  "hypercharge": "Seismic Event",
+  "emojis": [
+   "🚧",
+   "⚠️",
+   "👷",
+   "🏗️",
+   "🔨"
+  ],
+  "abilities": [
+   {
+    "id": 23000256,
+    "kind": "Gadget",
+    "name": "Pneumatic Booster",
+    "description": "Jacky gets a burst of energy and moves % faster for seconds."
+   },
+   {
+    "id": 23000486,
+    "kind": "Gadget",
+    "name": "Rebuild",
+    "description": "Jacky rebuilds the environment in a small radius around her."
+   },
+   {
+    "id": 23000222,
+    "kind": "Star Power",
+    "name": "Counter Crush",
+    "description": "When receiving damage, Jacky returns the favor by converting x% of the damage into a Groundbreaker counterattack."
+   },
+   {
+    "id": 23000223,
+    "kind": "Star Power",
+    "name": "Hardy Hard Hat",
+    "description": "Jacky's Hard Hat protects her by reducing any damage she takes by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000093,
+  "name": "Jae-Yong",
+  "slug": "jae-yong",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2025,
+  "hypercharge": "Crowd-Pleaser",
+  "emojis": [
+   "💼",
+   "🌙",
+   "🎶",
+   "🍻",
+   "🎤"
+  ],
+  "abilities": [
+   {
+    "id": 23000931,
+    "kind": "Gadget",
+    "name": "Weekend Warrior",
+    "description": "Deals area damage and increases main attack damage for x sec."
+   },
+   {
+    "id": 23000932,
+    "kind": "Gadget",
+    "name": "Time For A Slow Song",
+    "description": "Jae-yong slows enemies around him and his attacks will leave trails of slowing paperwork for x sec."
+   },
+   {
+    "id": 23000929,
+    "kind": "Star Power",
+    "name": "The Crowd Goes Mild",
+    "description": "Being near teammates gives Jae-yong a % speed boost per teammate in range."
+   },
+   {
+    "id": 23000930,
+    "kind": "Star Power",
+    "name": "Extra High Note",
+    "description": "Main Attacks now deal an additional x% Damage per target pierced."
+   }
+  ]
+ },
+ {
+  "id": 16000057,
+  "name": "Janet",
+  "slug": "janet",
+  "rarity": "Mythic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2022,
+  "hypercharge": "Magnum Opus",
+  "emojis": [
+   "🎤",
+   "🌟",
+   "🎸",
+   "🛩️",
+   "✈️"
+  ],
+  "abilities": [
+   {
+    "id": 23000472,
+    "kind": "Gadget",
+    "name": "Drop The Bass",
+    "description": "Janet deploys a speaker that deals x damage per second to all enemies in the area until it gets destroyed."
+   },
+   {
+    "id": 23000473,
+    "kind": "Gadget",
+    "name": "Backstage Pass",
+    "description": "Janet's next High Note pushes her back, even over walls. The more focused her attack is, the further she'll be pushed back."
+   },
+   {
+    "id": 23000470,
+    "kind": "Star Power",
+    "name": "Stage View",
+    "description": "While in the air with her jetpack, Janet reveals a large area of bushes around herself."
+   },
+   {
+    "id": 23000471,
+    "kind": "Star Power",
+    "name": "Vocal Warm Up",
+    "description": "Janet's attack focuses x% faster."
+   }
+  ]
+ },
+ {
+  "id": 16000007,
+  "name": "Jessie",
+  "slug": "jessie",
+  "rarity": "Super Rare",
+  "role": "Controller",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Scrappy 2",
+  "emojis": [
+   "👧",
+   "⚡",
+   "🔧",
+   "🐕",
+   "🔫"
+  ],
+  "abilities": [
+   {
+    "id": 23000251,
+    "kind": "Gadget",
+    "name": "Spark Plug",
+    "description": "Jessie triggers a shockwave from her turret, slowing down all enemies within its area of effect."
+   },
+   {
+    "id": 23000295,
+    "kind": "Gadget",
+    "name": "Recoil Spring",
+    "description": "Scrappy's attack speed is doubled for x seconds."
+   },
+   {
+    "id": 23000083,
+    "kind": "Star Power",
+    "name": "Energize",
+    "description": "Jessie can repair her gun turret for x of its missing health by zapping it with her attack."
+   },
+   {
+    "id": 23000149,
+    "kind": "Star Power",
+    "name": "Shocky",
+    "description": "Scrappy the Turret now shoots energy orbs that bounce between enemies. The orbs' range after a bounce is x% of normal range."
+   }
+  ]
+ },
+ {
+  "id": 16000087,
+  "name": "Juju",
+  "slug": "juju",
+  "rarity": "Mythic",
+  "role": "Artillery",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2024,
+  "hypercharge": "Bokor",
+  "emojis": [
+   "🌿",
+   "🔥",
+   "🔮",
+   "🪡",
+   "🧸"
+  ],
+  "abilities": [
+   {
+    "id": 23000850,
+    "kind": "Gadget",
+    "name": "Voodoo Chile",
+    "description": "Juju's next main attack has the power of all three elements."
+   },
+   {
+    "id": 23000851,
+    "kind": "Gadget",
+    "name": "Elementalist",
+    "description": "Juju gains a temporary buff based on the current environment she is standing on.Earth: Damage reductionGrass: InvisibilityWater: Increased movement speed"
+   },
+   {
+    "id": 23000848,
+    "kind": "Star Power",
+    "name": "Guarded Gris-Gris",
+    "description": "Gris-Gris is summoned with a protective shield."
+   },
+   {
+    "id": 23000849,
+    "kind": "Star Power",
+    "name": "Numbing Needles",
+    "description": "Gris-Gris' attack now also slows the enemy for sec"
+   }
+  ]
+ },
+ {
+  "id": 16000094,
+  "name": "Kaze",
+  "slug": "kaze",
+  "rarity": "Ultra Legendary",
+  "role": "Assassin",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2025,
+  "hypercharge": "Ancient Energy",
+  "emojis": [
+   "🌸",
+   "🍵",
+   "🪭",
+   "👘",
+   "🥷"
+  ],
+  "abilities": [
+   {
+    "id": 23000940,
+    "kind": "Gadget",
+    "name": "Gracious Host",
+    "description": "Switch to Ninja Aspect and gain x% Movement Speed for x sec"
+   },
+   {
+    "id": 23000941,
+    "kind": "Gadget",
+    "name": "Hensojutsu",
+    "description": "Switch to Ninja Aspect and gain short invisibility"
+   },
+   {
+    "id": 23000938,
+    "kind": "Star Power",
+    "name": "Advanced Techniques",
+    "description": "Hitting an enemy in a Strike Spot also slows them by x% for x sec"
+   },
+   {
+    "id": 23000939,
+    "kind": "Star Power",
+    "name": "Gratuity Included",
+    "description": "Removes x% ammo from Brawlers initially caught in the Fan Storm"
+   }
+  ]
+ },
+ {
+  "id": 16000085,
+  "name": "Kenji",
+  "slug": "kenji",
+  "rarity": "Legendary",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2024,
+  "hypercharge": "All You Can Eat",
+  "emojis": [
+   "🔪",
+   "🍚",
+   "🏮",
+   "⚔️",
+   "🍣"
+  ],
+  "abilities": [
+   {
+    "id": 23000817,
+    "kind": "Gadget",
+    "name": "Dashi Dash",
+    "description": "Kenji's basic attack only uses Dash for the next x seconds."
+   },
+   {
+    "id": 23000818,
+    "kind": "Gadget",
+    "name": "Hosomaki Healing",
+    "description": "Kenji instantly heals x% of damage taken over the last x seconds."
+   },
+   {
+    "id": 23000815,
+    "kind": "Star Power",
+    "name": "Studied The Blade",
+    "description": "Slashimi's slices have x% longer range"
+   },
+   {
+    "id": 23000816,
+    "kind": "Star Power",
+    "name": "Nigiri Nemesis",
+    "description": "After avoiding damage for x seconds, gets x% damage reduction from the next enemy attack."
+   }
+  ]
+ },
+ {
+  "id": 16000076,
+  "name": "Kit",
+  "slug": "kit",
+  "rarity": "Legendary",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2023,
+  "hypercharge": "Making Biscuits",
+  "emojis": [
+   "📦",
+   "🐾",
+   "🧶",
+   "🦘",
+   "🐱"
+  ],
+  "abilities": [
+   {
+    "id": 23000648,
+    "kind": "Gadget",
+    "name": "Cardboard Box",
+    "description": "Hide in a cardboard box becoming invisible for x seconds. Charges the Super x faster while stationary."
+   },
+   {
+    "id": 23000649,
+    "kind": "Gadget",
+    "name": "Cheeseburger",
+    "description": "Heals himself and the friendly Brawler he is attached to for x."
+   },
+   {
+    "id": 23000646,
+    "kind": "Star Power",
+    "name": "Power Hungry",
+    "description": "Kit gains x% power from each Power Cube."
+   },
+   {
+    "id": 23000647,
+    "kind": "Star Power",
+    "name": "Overly Attached",
+    "description": "Kit attaches to friendly Brawlers for x seconds longer."
+   }
+  ]
+ },
+ {
+  "id": 16000077,
+  "name": "Larry & Lawrie",
+  "slug": "larry-and-lawrie",
+  "rarity": "Epic",
+  "role": "Artillery",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2024,
+  "hypercharge": "The Three-Bot Problem",
+  "emojis": [
+   "📑",
+   "📦",
+   "📬",
+   "🤖",
+   "👬"
+  ],
+  "abilities": [
+   {
+    "id": 23000661,
+    "kind": "Gadget",
+    "name": "Order Swap",
+    "description": "Swap weapons with Lawrie."
+   },
+   {
+    "id": 23000662,
+    "kind": "Gadget",
+    "name": "Order Fall Back",
+    "description": "Dash towards Lawrie while Lawrie dashes towards you, healing both for x% of max health."
+   },
+   {
+    "id": 23000659,
+    "kind": "Star Power",
+    "name": "Protocol Protect",
+    "description": "While Lawrie is in range, transfer x% incoming damage to himself instead."
+   },
+   {
+    "id": 23000660,
+    "kind": "Star Power",
+    "name": "Protocol Assist",
+    "description": "While Lawrie is in range, reload x% of your ammo whenever he damages an enemy."
+   }
+  ]
+ },
+ {
+  "id": 16000023,
+  "name": "Leon",
+  "slug": "leon",
+  "rarity": "Legendary",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Very Long",
+  "releaseYear": 2018,
+  "hypercharge": "Limbo",
+  "emojis": [
+   "🍭",
+   "🌈",
+   "🦎",
+   "👀",
+   "🫥"
+  ],
+  "abilities": [
+   {
+    "id": 23000276,
+    "kind": "Gadget",
+    "name": "Clone Projector",
+    "description": "Leon creates an illusion of himself to confuse his enemies. The clone attacks enemies dealing minor damage"
+   },
+   {
+    "id": 23000408,
+    "kind": "Gadget",
+    "name": "Lollipop Drop",
+    "description": "Leon throws a stealthy area for his team to hide in. The lollipop slowly loses its health over time."
+   },
+   {
+    "id": 23000119,
+    "kind": "Star Power",
+    "name": "Smoke Trails",
+    "description": "When Leon is not visible, he gains a % movement speed for the duration of his invisibility."
+   },
+   {
+    "id": 23000141,
+    "kind": "Star Power",
+    "name": "Invisiheal",
+    "description": "Leon recovers health per second while his Super is active."
+   }
+  ]
+ },
+ {
+  "id": 16000081,
+  "name": "Lily",
+  "slug": "lily",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2024,
+  "hypercharge": "Germinate",
+  "emojis": [
+   "📚",
+   "🧙",
+   "🌿",
+   "🗡️",
+   "🌺"
+  ],
+  "abilities": [
+   {
+    "id": 23000754,
+    "kind": "Gadget",
+    "name": "Vanish",
+    "description": "Lily enters the Shadow Realm for x seconds"
+   },
+   {
+    "id": 23000755,
+    "kind": "Gadget",
+    "name": "Repot",
+    "description": "The next Flourish, becomes a thrown attack, and Lily teleports to the destination on impact"
+   },
+   {
+    "id": 23000752,
+    "kind": "Star Power",
+    "name": "Spiky",
+    "description": "After teleporting to an enemy, Lily's next attack deals x more damage"
+   },
+   {
+    "id": 23000753,
+    "kind": "Star Power",
+    "name": "Vigilance",
+    "description": "Gain % movement speed while an enemy is in her Super charge radius."
+   }
+  ]
+ },
+ {
+  "id": 16000053,
+  "name": "Lola",
+  "slug": "lola",
+  "rarity": "Epic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "Inflated Ego",
+  "emojis": [
+   "🎬",
+   "💄",
+   "👯‍♀️",
+   "🌟",
+   "💋"
+  ],
+  "abilities": [
+   {
+    "id": 23000433,
+    "kind": "Gadget",
+    "name": "Freeze Frame",
+    "description": "Lola's Ego stops moving to strike a pose! Gaining a x% shield for x seconds."
+   },
+   {
+    "id": 23000456,
+    "kind": "Gadget",
+    "name": "Stunt Double",
+    "description": "Lola and her Ego switch locations, both recovering x health."
+   },
+   {
+    "id": 23000431,
+    "kind": "Star Power",
+    "name": "Improvise",
+    "description": "When down to her last round, Lola deals an extra x% damage."
+   },
+   {
+    "id": 23000432,
+    "kind": "Star Power",
+    "name": "Sealed With A Kiss",
+    "description": "Projectiles from Lola's Ego will heal allies that are caught in its path by x health."
+   }
+  ]
+ },
+ {
+  "id": 16000041,
+  "name": "Lou",
+  "slug": "lou",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2020,
+  "hypercharge": "Slushie Storm",
+  "emojis": [
+   "🍧",
+   "🥶",
+   "🍦",
+   "🧊",
+   "❄️"
+  ],
+  "abilities": [
+   {
+    "id": 23000326,
+    "kind": "Gadget",
+    "name": "Ice Block",
+    "description": "Lou shields himself with ice, becoming invulnerable for x seconds."
+   },
+   {
+    "id": 23000400,
+    "kind": "Gadget",
+    "name": "Cryo Syrup",
+    "description": "Instantly adds x% freeze meter to opponents inside Lou's Super."
+   },
+   {
+    "id": 23000324,
+    "kind": "Star Power",
+    "name": "Supercool",
+    "description": "Opponents standing on Lou's Super area get frozen x% faster."
+   },
+   {
+    "id": 23000325,
+    "kind": "Star Power",
+    "name": "Hypothermia",
+    "description": "Opponents lose up to x% of their damage based on how frozen they are from Lou's attacks."
+   }
+  ]
+ },
+ {
+  "id": 16000091,
+  "name": "Lumi",
+  "slug": "lumi",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2025,
+  "hypercharge": "Drum Solo",
+  "emojis": [
+   "🤘",
+   "🔥",
+   "❄️",
+   "⛓️",
+   "🥁"
+  ],
+  "abilities": [
+   {
+    "id": 23000907,
+    "kind": "Gadget",
+    "name": "Hit The Lights",
+    "description": "Lumi ignites her morning stars on the ground, producing flames which damage nearby enemies for x seconds. Damage per second: x"
+   },
+   {
+    "id": 23000908,
+    "kind": "Gadget",
+    "name": "Grim And Frostbitten",
+    "description": "Lumi creates freezing winds around her morning stars on the ground, creating a slippery surface for x secs."
+   },
+   {
+    "id": 23000905,
+    "kind": "Star Power",
+    "name": "42% Burnt",
+    "description": "The explosions from Lumi's Blast Beat also set the area alight for x seconds. Fire damage also scales with explosion damage. Damage per second for the biggest explosion: x"
+   },
+   {
+    "id": 23000906,
+    "kind": "Star Power",
+    "name": "Half-Time",
+    "description": "Lumi slows enemies hit by her recalled morning stars for x seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000068,
+  "name": "Maisie",
+  "slug": "maisie",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2023,
+  "hypercharge": "Aftermath",
+  "emojis": [
+   "🔧",
+   "🎯",
+   "💥",
+   "🦾",
+   "👩‍🔧"
+  ],
+  "abilities": [
+   {
+    "id": 23000571,
+    "kind": "Gadget",
+    "name": "Disengage",
+    "description": "Maisie blasts the ground, stunning enemies for x seconds while dashing forward."
+   },
+   {
+    "id": 23000572,
+    "kind": "Gadget",
+    "name": "Finish Them",
+    "description": "Maisie instantly reloads x ammo and increases the next Pressure Rocket damage by x% of the target's missing HP."
+   },
+   {
+    "id": 23000569,
+    "kind": "Star Power",
+    "name": "Pinpoint Precision",
+    "description": "Pressure rocket deals x% more damage at max distance."
+   },
+   {
+    "id": 23000570,
+    "kind": "Star Power",
+    "name": "Tremors",
+    "description": "Enemies hit by Shockwave are also slowed down for x seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000065,
+  "name": "Mandy",
+  "slug": "mandy",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2022,
+  "hypercharge": "Sugar for All!",
+  "emojis": [
+   "👑",
+   "🎯",
+   "🍭",
+   "🔫",
+   "🍬"
+  ],
+  "abilities": [
+   {
+    "id": 23000545,
+    "kind": "Gadget",
+    "name": "Caramelize",
+    "description": "Mandy's next candy from her Candy Dispenser slows down enemies on hit for seconds."
+   },
+   {
+    "id": 23000546,
+    "kind": "Gadget",
+    "name": "Cookie Crumbs",
+    "description": "Mandy's next candy from her Candy Dispenser pierces enemies and environment."
+   },
+   {
+    "id": 23000543,
+    "kind": "Star Power",
+    "name": "In My Sights",
+    "description": "Mandy shoots her candies with x% more speed while Focused."
+   },
+   {
+    "id": 23000544,
+    "kind": "Star Power",
+    "name": "Hard Candy",
+    "description": "Mandy receives x% shield while Focused."
+   }
+  ]
+ },
+ {
+  "id": 16000032,
+  "name": "Max",
+  "slug": "max",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Long",
+  "releaseYear": 2019,
+  "hypercharge": "Unlimited Energy",
+  "emojis": [
+   "⏩",
+   "🥤",
+   "🏃‍♀️",
+   "💨",
+   "⚡"
+  ],
+  "abilities": [
+   {
+    "id": 23000254,
+    "kind": "Gadget",
+    "name": "Phase Shifter",
+    "description": "Max dashes forward, and becomes immune to all damage from enemies while dashing."
+   },
+   {
+    "id": 23000311,
+    "kind": "Gadget",
+    "name": "Sneaky Sneakers",
+    "description": "Max throws a lightning bolt. If she reactivates the Gadget, or after seconds, she blinks back to the lightning bolt and heals any damage taken since."
+   },
+   {
+    "id": 23000210,
+    "kind": "Star Power",
+    "name": "Super Charged",
+    "description": "Hitting an enemy with Max's Main Attack extends the duration of her Super by sec."
+   },
+   {
+    "id": 23000211,
+    "kind": "Star Power",
+    "name": "Run N Gun",
+    "description": "Max reloads faster while moving."
+   }
+  ]
+ },
+ {
+  "id": 16000089,
+  "name": "Meeple",
+  "slug": "meeple",
+  "rarity": "Epic",
+  "role": "Controller",
+  "gender": "Other",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2025,
+  "hypercharge": "The Last Rulebender",
+  "emojis": [
+   "📜",
+   "😠",
+   "🎲",
+   "🧩",
+   "♟️"
+  ],
+  "abilities": [
+   {
+    "id": 23000877,
+    "kind": "Gadget",
+    "name": "Mansions Of Meeple",
+    "description": "Meeple's next attack creates dice towers around the impact area and deals x damage."
+   },
+   {
+    "id": 23000878,
+    "kind": "Gadget",
+    "name": "Ragequit",
+    "description": "Meeple lashes out in rage at nearby enemies, stunning and knocking them back. The less hitpoints Meeple has, the stun and knockback effects increase."
+   },
+   {
+    "id": 23000875,
+    "kind": "Star Power",
+    "name": "Do Not Pass Go",
+    "description": "When you shoot through environment deal x more damage."
+   },
+   {
+    "id": 23000876,
+    "kind": "Star Power",
+    "name": "Rule Bending",
+    "description": "Critical success also increases allies reload speed within the area by %."
+   }
+  ]
+ },
+ {
+  "id": 16000052,
+  "name": "Meg",
+  "slug": "meg",
+  "rarity": "Legendary",
+  "role": "Tank",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "Tungsten Toughness",
+  "emojis": [
+   "👧",
+   "🔧",
+   "🦾",
+   "🔋",
+   "🤖"
+  ],
+  "abilities": [
+   {
+    "id": 23000423,
+    "kind": "Gadget",
+    "name": "Jolting Volts",
+    "description": "Heal the Mecha by x health per second for x seconds. Can only be used in mecha form."
+   },
+   {
+    "id": 23000489,
+    "kind": "Gadget",
+    "name": "Repurpose",
+    "description": "Meg ejects from the Mecha, launching it forward, dealing damage on the way. Charges Super after during the next seconds."
+   },
+   {
+    "id": 23000421,
+    "kind": "Star Power",
+    "name": "Force Field",
+    "description": "Meg is protected by a x% shield for x seconds when her Mecha is destroyed."
+   },
+   {
+    "id": 23000422,
+    "kind": "Star Power",
+    "name": "Heavy Metal",
+    "description": "The Mecha recovers health for each enemy hit with Feel the Steel (Super in Mech)."
+   }
+  ]
+ },
+ {
+  "id": 16000078,
+  "name": "Melodie",
+  "slug": "melodie",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2024,
+  "hypercharge": "Flash Mob",
+  "emojis": [
+   "💖",
+   "🎤",
+   "💫",
+   "🎵",
+   "🎶"
+  ],
+  "abilities": [
+   {
+    "id": 23000669,
+    "kind": "Gadget",
+    "name": "Perfect Pitch",
+    "description": "Melodie's notes get x% increased movement speed and x% wider orbit for x seconds."
+   },
+   {
+    "id": 23000670,
+    "kind": "Gadget",
+    "name": "Interlude",
+    "description": "Melodie gains x% Shield from each note orbiting her."
+   },
+   {
+    "id": 23000667,
+    "kind": "Star Power",
+    "name": "Fast Beats",
+    "description": "Melodie gains % increased movement speed from each note orbiting her."
+   },
+   {
+    "id": 23000668,
+    "kind": "Star Power",
+    "name": "Extended Mix",
+    "description": "Melodie's notes last for x% longer before vanishing."
+   }
+  ]
+ },
+ {
+  "id": 16000075,
+  "name": "Mico",
+  "slug": "mico",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2023,
+  "hypercharge": "Sound Check",
+  "emojis": [
+   "🎤",
+   "🎸",
+   "🦘",
+   "🍌",
+   "🐒"
+  ],
+  "abilities": [
+   {
+    "id": 23000639,
+    "kind": "Gadget",
+    "name": "Clipping Scream",
+    "description": "Mico lets out a deafening scream towards the nearest enemy, dealing damage and slowing down enemies for seconds on hit."
+   },
+   {
+    "id": 23000640,
+    "kind": "Gadget",
+    "name": "Presto",
+    "description": "Mico's next jump has x% longer range."
+   },
+   {
+    "id": 23000637,
+    "kind": "Star Power",
+    "name": "Monkey Business",
+    "description": "Every x seconds, Mico's basic attack steals ammo from his enemies after hitting them."
+   },
+   {
+    "id": 23000638,
+    "kind": "Star Power",
+    "name": "Record Smash",
+    "description": "Mico deals x% extra damage against non Brawlers."
+   }
+  ]
+ },
+ {
+  "id": 16000097,
+  "name": "Mina",
+  "slug": "mina",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2025,
+  "hypercharge": "Triplecane",
+  "emojis": [
+   "🎧",
+   "🌪️",
+   "🦵",
+   "🤸",
+   "💃"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000084,
+  "name": "Moe",
+  "slug": "moe",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2024,
+  "hypercharge": "The Big Cheese",
+  "emojis": [
+   "🕶️",
+   "🚇",
+   "🧀",
+   "⛏️",
+   "🐭"
+  ],
+  "abilities": [
+   {
+    "id": 23000806,
+    "kind": "Gadget",
+    "name": "Dodgy Digging",
+    "description": "Moe digs up some \"borrowed\" goods, increasing his Super charge rate by x% for x seconds."
+   },
+   {
+    "id": 23000807,
+    "kind": "Gadget",
+    "name": "Rat Race",
+    "description": "Moe dashes a short distance in his Driller, destroying walls and knocking back Brawlers in the process."
+   },
+   {
+    "id": 23000804,
+    "kind": "Star Power",
+    "name": "Skipping Stones",
+    "description": "Moe's basic attacks bounce one more time. The range of the attack remains the same."
+   },
+   {
+    "id": 23000805,
+    "kind": "Star Power",
+    "name": "Speeding Ticket",
+    "description": "Moe's Driller has % increased travel speed."
+   }
+  ]
+ },
+ {
+  "id": 16000011,
+  "name": "Mortis",
+  "slug": "mortis",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2017,
+  "hypercharge": "Blood Boomerang",
+  "emojis": [
+   "⚰️",
+   "🎩",
+   "🪦",
+   "🦇",
+   "🧛"
+  ],
+  "abilities": [
+   {
+    "id": 23000265,
+    "kind": "Gadget",
+    "name": "Combo Spinner",
+    "description": "Mortis spins his shovel dealing damage. Can also be aimed for a short-distance bat attack."
+   },
+   {
+    "id": 23000290,
+    "kind": "Gadget",
+    "name": "Creature Of The Night",
+    "description": "Mortis turns into a flock of bats and travels to a target location."
+   },
+   {
+    "id": 23000087,
+    "kind": "Star Power",
+    "name": "Creepy Harvest",
+    "description": "Mortis reaps the life essence of Brawlers he defeats, restoring x% of his max health."
+   },
+   {
+    "id": 23000154,
+    "kind": "Star Power",
+    "name": "Coiled Snake",
+    "description": "Mortis gains his longer dash x seconds faster."
+   }
+  ]
+ },
+ {
+  "id": 16000031,
+  "name": "Mr. P",
+  "slug": "mr-p",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2020,
+  "hypercharge": "Super Porters! Assemble!",
+  "emojis": [
+   "🏨",
+   "🧳",
+   "🛎️",
+   "❄️",
+   "🐧"
+  ],
+  "abilities": [
+   {
+    "id": 23000269,
+    "kind": "Gadget",
+    "name": "Service Bell",
+    "description": "Mr. P buffs his current porter by increasing its damage by x and health by x."
+   },
+   {
+    "id": 23000349,
+    "kind": "Gadget",
+    "name": "Porter Reinforcements",
+    "description": "The next attack will spawn a weak porter where the attack lands."
+   },
+   {
+    "id": 23000204,
+    "kind": "Star Power",
+    "name": "Handle With Care",
+    "description": "Every x seconds, the explosion damage of Mr. P's next overstuffed suitcase is increased by x%."
+   },
+   {
+    "id": 23000205,
+    "kind": "Star Power",
+    "name": "Revolving Door",
+    "description": "All robo-porters from the home base now have x% more health and x% higher damage."
+   }
+  ]
+ },
+ {
+  "id": 16000103,
+  "name": "Najia",
+  "slug": "najia",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2026,
+  "hypercharge": "Twin Snakes",
+  "emojis": [
+   "🧩",
+   "🏺",
+   "☠️",
+   "🔺",
+   "🐍"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000036,
+  "name": "Nani",
+  "slug": "nani",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2020,
+  "hypercharge": "Big Peep",
+  "emojis": [
+   "🤖",
+   "🎮",
+   "🔮",
+   "🛸",
+   "👁️"
+  ],
+  "abilities": [
+   {
+    "id": 23000278,
+    "kind": "Gadget",
+    "name": "Warpin Time",
+    "description": "Nani teleports to Peep's last known location and ends her Super."
+   },
+   {
+    "id": 23000353,
+    "kind": "Gadget",
+    "name": "Return To Sender",
+    "description": "For the next x seconds, the first time Nani takes damage from an enemy, x% of the damage is returned to the enemy."
+   },
+   {
+    "id": 23000234,
+    "kind": "Star Power",
+    "name": "Autofocus",
+    "description": "Peep deals up to x extra damage based on his travel distance."
+   },
+   {
+    "id": 23000235,
+    "kind": "Star Power",
+    "name": "Tempered Steel",
+    "description": "Nani takes x% less damage while her Super is active."
+   }
+  ]
+ },
+ {
+  "id": 16000008,
+  "name": "Nita",
+  "slug": "nita",
+  "rarity": "Rare",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2017,
+  "hypercharge": "Hyperbearing",
+  "emojis": [
+   "🪶",
+   "🐾",
+   "🧸",
+   "🥁",
+   "🐻"
+  ],
+  "abilities": [
+   {
+    "id": 23000249,
+    "kind": "Gadget",
+    "name": "Bear Paws",
+    "description": "Nita commands her bear to slam the ground, stunning all enemies within its reach."
+   },
+   {
+    "id": 23000314,
+    "kind": "Gadget",
+    "name": "Faux Fur",
+    "description": "For the next seconds, Nita's bear gets a % shield against damage."
+   },
+   {
+    "id": 23000084,
+    "kind": "Star Power",
+    "name": "Bear With Me",
+    "description": "Nita recovers x health whenever her bear hits an enemy Brawler. When Nita deals damage to an enemy Brawler, her bear regains x health."
+   },
+   {
+    "id": 23000136,
+    "kind": "Star Power",
+    "name": "Hyper Bear",
+    "description": "Nita's bear attacks faster. Time between swipes is reduced by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000107,
+  "name": "Nori",
+  "slug": "nori",
+  "rarity": "Legendary",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Very Fast",
+  "range": "Long",
+  "releaseYear": 2026,
+  "hypercharge": "Master Fisherman",
+  "emojis": [
+   "👶",
+   "🍳",
+   "🎣",
+   "⚔️",
+   "🍙"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000090,
+  "name": "Ollie",
+  "slug": "ollie",
+  "rarity": "Mythic",
+  "role": "Tank",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2025,
+  "hypercharge": "Ain't No Half-Supering",
+  "emojis": [
+   "🧢",
+   "🎵",
+   "🕺",
+   "📻",
+   "🛹"
+  ],
+  "abilities": [
+   {
+    "id": 23000885,
+    "kind": "Gadget",
+    "name": "Regulate",
+    "description": "Ollie jumps and does a rad kickflip, hypnotizing all enemies where he lands for x seconds."
+   },
+   {
+    "id": 23000886,
+    "kind": "Gadget",
+    "name": "All Eyez On Me",
+    "description": "Ollie's next attack will hypnotize any enemies hit for x seconds."
+   },
+   {
+    "id": 23000883,
+    "kind": "Star Power",
+    "name": "Kick Push",
+    "description": "While near walls, Ollie kicks off his hoverboard and gains % extra movement speed."
+   },
+   {
+    "id": 23000884,
+    "kind": "Star Power",
+    "name": "Renegade",
+    "description": "After dashing forward with his Super, Ollie gains a decaying shield over seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000059,
+  "name": "Otis",
+  "slug": "otis",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2022,
+  "hypercharge": "Silent Stunner",
+  "emojis": [
+   "🎨",
+   "🖌️",
+   "🤐",
+   "🦑",
+   "🐙"
+  ],
+  "abilities": [
+   {
+    "id": 23000497,
+    "kind": "Gadget",
+    "name": "Dormant Star",
+    "description": "The next starfish will stay on the ground if an enemy is not hit, laying dormant until an enemy gets close."
+   },
+   {
+    "id": 23000498,
+    "kind": "Gadget",
+    "name": "Phat Splatter",
+    "description": "Otis's next attack shoots a giant ink ball that leaves a puddle, dealing x damage over time for x seconds."
+   },
+   {
+    "id": 23000495,
+    "kind": "Star Power",
+    "name": "Stencil Glue",
+    "description": "Cil mightily squeezes the enemy with all his might. Preventing them from attacking for x% longer."
+   },
+   {
+    "id": 23000496,
+    "kind": "Star Power",
+    "name": "Ink Refills",
+    "description": "Otis now shoots x% more ink drops."
+   }
+  ]
+ },
+ {
+  "id": 16000016,
+  "name": "Pam",
+  "slug": "pam",
+  "rarity": "Epic",
+  "role": "Support",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Mama's Love",
+  "emojis": [
+   "🔩",
+   "🗑️",
+   "👩‍👧",
+   "💚",
+   "🧰"
+  ],
+  "abilities": [
+   {
+    "id": 23000257,
+    "kind": "Gadget",
+    "name": "Pulse Modulator",
+    "description": "Pam triggers her turret to emit a pulse that heals allies inside the turret's range, including herself, for x health."
+   },
+   {
+    "id": 23000404,
+    "kind": "Gadget",
+    "name": "Scrapsucker",
+    "description": "Each hit from Pam's next attack removes x% of opposing Brawlers' maximum ammo. Pam reclaims x% of the ammo for herself."
+   },
+   {
+    "id": 23000092,
+    "kind": "Star Power",
+    "name": "Mamas Hug",
+    "description": "Whenever Pam hits enemy Brawlers with Scrapstorm, she heals herself and nearby friendly Brawlers for x health."
+   },
+   {
+    "id": 23000139,
+    "kind": "Star Power",
+    "name": "Mamas Squeeze",
+    "description": "Healing turret now also damages enemies for x damage per second."
+   }
+  ]
+ },
+ {
+  "id": 16000072,
+  "name": "Pearl",
+  "slug": "pearl",
+  "rarity": "Epic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2023,
+  "hypercharge": "Pyrolitic",
+  "emojis": [
+   "🧁",
+   "🌡️",
+   "🔥",
+   "💥",
+   "🍪"
+  ],
+  "abilities": [
+   {
+    "id": 23000603,
+    "kind": "Gadget",
+    "name": "Overcooked",
+    "description": "Next basic attack shoots burning cookies, dealing x extra damage over time."
+   },
+   {
+    "id": 23000604,
+    "kind": "Gadget",
+    "name": "Made With Love",
+    "description": "Next basic attack shoots perfectly baked cookies ignoring enemies and healing allies for x over time instead."
+   },
+   {
+    "id": 23000601,
+    "kind": "Star Power",
+    "name": "Heat Retention",
+    "description": "Super will consume x% less Heat when used."
+   },
+   {
+    "id": 23000602,
+    "kind": "Star Power",
+    "name": "Heat Shield",
+    "description": "While the Heat is over x%, reduce damage taken by x%."
+   }
+  ]
+ },
+ {
+  "id": 16000019,
+  "name": "Penny",
+  "slug": "penny",
+  "rarity": "Super Rare",
+  "role": "Controller",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2018,
+  "hypercharge": "New Lobber",
+  "emojis": [
+   "🦜",
+   "🪙",
+   "🗺️",
+   "💣",
+   "🏴‍☠️"
+  ],
+  "abilities": [
+   {
+    "id": 23000248,
+    "kind": "Gadget",
+    "name": "Salty Barrel",
+    "description": "Penny drops a barrel of salt that blocks enemy projectiles. She can also use it to burst her own gold pouches."
+   },
+   {
+    "id": 23000287,
+    "kind": "Gadget",
+    "name": "Trusty Spyglass",
+    "description": "Penny's cannon blasts at every visible enemy position within range."
+   },
+   {
+    "id": 23000099,
+    "kind": "Star Power",
+    "name": "Heavy Coffers",
+    "description": "Penny's gold pouches burst with a x% wider cone after each hit."
+   },
+   {
+    "id": 23000142,
+    "kind": "Star Power",
+    "name": "Master Blaster",
+    "description": "Penny's cannon deals x damage and knocks back nearby enemies on landing."
+   }
+  ]
+ },
+ {
+  "id": 16000099,
+  "name": "Pierce",
+  "slug": "pierce",
+  "rarity": "Legendary",
+  "role": "Marksman",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2025,
+  "hypercharge": "Second Wave",
+  "emojis": [
+   "☀️",
+   "💦",
+   "🚽",
+   "🔫",
+   "🎯"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000015,
+  "name": "Piper",
+  "slug": "piper",
+  "rarity": "Epic",
+  "role": "Marksman",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2017,
+  "hypercharge": "Boppin'",
+  "emojis": [
+   "🎀",
+   "🍰",
+   "🎯",
+   "👒",
+   "☂️"
+  ],
+  "abilities": [
+   {
+    "id": 23000268,
+    "kind": "Gadget",
+    "name": "Auto Aimer",
+    "description": "Piper pops a defensive shot at the closest enemy, dealing x damage, while also pushing them back."
+   },
+   {
+    "id": 23000291,
+    "kind": "Gadget",
+    "name": "Homemade Recipe",
+    "description": "On activation, Piper's next main attack will home in on enemies."
+   },
+   {
+    "id": 23000091,
+    "kind": "Star Power",
+    "name": "Ambush",
+    "description": "Piper's attack deals +x extra damage (at max range) when she's hidden in a bush."
+   },
+   {
+    "id": 23000152,
+    "kind": "Star Power",
+    "name": "Snappy Sniping",
+    "description": "When Piper hits an opponent with her attack, she reloads x ammo instantly."
+   }
+  ]
+ },
+ {
+  "id": 16000013,
+  "name": "Poco",
+  "slug": "poco",
+  "rarity": "Rare",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Medic's Melody",
+  "emojis": [
+   "🎶",
+   "💚",
+   "💀",
+   "🎸",
+   "🪇"
+  ],
+  "abilities": [
+   {
+    "id": 23000267,
+    "kind": "Gadget",
+    "name": "Tuning Fork",
+    "description": "Poco and all nearby allies heal for health times."
+   },
+   {
+    "id": 23000350,
+    "kind": "Gadget",
+    "name": "Protective Tunes",
+    "description": "Poco creates a large AoE lasting seconds that removes all adverse effects and grants them immunity while inside."
+   },
+   {
+    "id": 23000089,
+    "kind": "Star Power",
+    "name": "Da Capo",
+    "description": "When Poco's attack hits friendly Brawlers they heal for additional x health."
+   },
+   {
+    "id": 23000144,
+    "kind": "Star Power",
+    "name": "Screeching Solo",
+    "description": "Poco's Super now also hits enemies, dealing damage."
+   }
+  ]
+ },
+ {
+  "id": 16000066,
+  "name": "R-T",
+  "slug": "r-t",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2023,
+  "hypercharge": "360-Degree Surveillance",
+  "emojis": [
+   "📹",
+   "🔴",
+   "🚨",
+   "✂️",
+   "🤖"
+  ],
+  "abilities": [
+   {
+    "id": 23000555,
+    "kind": "Gadget",
+    "name": "Out Of Line",
+    "description": "Instantly charges R-T's Super."
+   },
+   {
+    "id": 23000556,
+    "kind": "Gadget",
+    "name": "Hacks",
+    "description": "Instantly trigger all active marks on all enemy Brawlers, dealing their damage."
+   },
+   {
+    "id": 23000553,
+    "kind": "Star Power",
+    "name": "Quick Maths",
+    "description": "Marks created last x seconds longer."
+   },
+   {
+    "id": 23000554,
+    "kind": "Star Power",
+    "name": "Recording",
+    "description": "R-T and his legs take x% less damage when split."
+   }
+  ]
+ },
+ {
+  "id": 16000004,
+  "name": "Rico",
+  "slug": "rico",
+  "rarity": "Super Rare",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Very Long",
+  "releaseYear": 2017,
+  "hypercharge": "Trick Shot King",
+  "emojis": [
+   "🔄",
+   "🤖",
+   "🍬",
+   "🎱",
+   "🏀"
+  ],
+  "abilities": [
+   {
+    "id": 23000246,
+    "kind": "Gadget",
+    "name": "Multiball Launcher",
+    "description": "Rico Deploys a vending machine that has health - when destroyed fires bouncing projectiles in all directions."
+   },
+   {
+    "id": 23000409,
+    "kind": "Gadget",
+    "name": "Multiball",
+    "description": "Rico fires a big bullet that, on hitting a wall or Brawler, splits into smaller bullets."
+   },
+   {
+    "id": 23000080,
+    "kind": "Star Power",
+    "name": "Super Bouncy",
+    "description": "Rico's bullets, from attack and Super alike, get Supercharged by their first bounce and deal +x damage!"
+   },
+   {
+    "id": 23000156,
+    "kind": "Star Power",
+    "name": "Robo Retreat",
+    "description": "Rico runs % faster when his health falls below %."
+   }
+  ]
+ },
+ {
+  "id": 16000024,
+  "name": "Rosa",
+  "slug": "rosa",
+  "rarity": "Rare",
+  "role": "Tank",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2019,
+  "hypercharge": "Grasping Roots",
+  "emojis": [
+   "🌸",
+   "🛡️",
+   "🌵",
+   "🌿",
+   "🥊"
+  ],
+  "abilities": [
+   {
+    "id": 23000242,
+    "kind": "Gadget",
+    "name": "Grow Light",
+    "description": "Rosa fertilizes the ground around her and bushes instantly grow to provide great cover."
+   },
+   {
+    "id": 23000348,
+    "kind": "Gadget",
+    "name": "Unfriendly Bushes",
+    "description": "All opponents hiding in bushes take damage and get slowed down for seconds."
+   },
+   {
+    "id": 23000124,
+    "kind": "Star Power",
+    "name": "Plant Life",
+    "description": "Rosa recovers x health per second when inside a bush."
+   },
+   {
+    "id": 23000147,
+    "kind": "Star Power",
+    "name": "Thorny Gloves",
+    "description": "Rosa's punches gain +x damage during her Super."
+   }
+  ]
+ },
+ {
+  "id": 16000044,
+  "name": "Ruffs",
+  "slug": "ruffs",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "The Goodest Boy",
+  "emojis": [
+   "🐶",
+   "🎖️",
+   "📦",
+   "🪖",
+   "🛩️"
+  ],
+  "abilities": [
+   {
+    "id": 23000347,
+    "kind": "Gadget",
+    "name": "Take Cover",
+    "description": "Ruffs throws down x sandbags as cover. Each one has x% of Ruffs' max health."
+   },
+   {
+    "id": 23000402,
+    "kind": "Gadget",
+    "name": "Air Support",
+    "description": "Ruffs calls a barrage around the nearest opponent, dealing x damage with each hit."
+   },
+   {
+    "id": 23000345,
+    "kind": "Star Power",
+    "name": "Air Superiority",
+    "description": "Supply Drop now includes a bomb that adds x% more damage to the drop and also allows it to destroy walls."
+   },
+   {
+    "id": 23000346,
+    "kind": "Star Power",
+    "name": "Field Promotion",
+    "description": "Friendly Brawlers have their maximum health increased by x every second that they are in range of this ability while it's active."
+   }
+  ]
+ },
+ {
+  "id": 16000060,
+  "name": "Sam",
+  "slug": "sam",
+  "rarity": "Epic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2022,
+  "hypercharge": "Hyper Fist",
+  "emojis": [
+   "🗑️",
+   "🚗",
+   "💪",
+   "🥊",
+   "🤜"
+  ],
+  "abilities": [
+   {
+    "id": 23000505,
+    "kind": "Gadget",
+    "name": "Magnetic Field",
+    "description": "While the Knuckle Busters are on the ground, Sam can activate them to pull in nearby enemies."
+   },
+   {
+    "id": 23000506,
+    "kind": "Gadget",
+    "name": "Pulse Repellent",
+    "description": "Upon landing on the ground, Sam's next deployed Knuckle Busters releases an electric pulse that knocks back enemies."
+   },
+   {
+    "id": 23000503,
+    "kind": "Star Power",
+    "name": "Hearty Recovery",
+    "description": "Upon recalling his Knuckle Busters, Sam instantly recovers x% of his missing health."
+   },
+   {
+    "id": 23000504,
+    "kind": "Star Power",
+    "name": "Remote Recharge",
+    "description": "While the Knuckle Busters are on the ground and near enemies, they will charge up Sam's Super."
+   }
+  ]
+ },
+ {
+  "id": 16000028,
+  "name": "Sandy",
+  "slug": "sandy",
+  "rarity": "Legendary",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Normal",
+  "releaseYear": 2019,
+  "hypercharge": "Swift Winds",
+  "emojis": [
+   "💤",
+   "🌪️",
+   "🏜️",
+   "🛌",
+   "😴"
+  ],
+  "abilities": [
+   {
+    "id": 23000270,
+    "kind": "Gadget",
+    "name": "Sleep Stimulator",
+    "description": "Sandy falls asleep for x seconds and his health is fully restored."
+   },
+   {
+    "id": 23000405,
+    "kind": "Gadget",
+    "name": "Sweet Dreams",
+    "description": "Sandy's next attack lulls opponents to sleep for x seconds. They will, however, wake up from any damage."
+   },
+   {
+    "id": 23000186,
+    "kind": "Star Power",
+    "name": "Rude Sands",
+    "description": "Sandstorm now also damages enemies for x damage per second."
+   },
+   {
+    "id": 23000187,
+    "kind": "Star Power",
+    "name": "Healing Winds",
+    "description": "Sandstorm now also heals friendly Brawlers for x health per second."
+   }
+  ]
+ },
+ {
+  "id": 16000086,
+  "name": "Shade",
+  "slug": "shade",
+  "rarity": "Epic",
+  "role": "Assassin",
+  "gender": "Other",
+  "speed": "Very Fast",
+  "range": "Short",
+  "releaseYear": 2024,
+  "hypercharge": "The Frightener",
+  "emojis": [
+   "👕",
+   "🕶️",
+   "🚉",
+   "👻",
+   "🧥"
+  ],
+  "abilities": [
+   {
+    "id": 23000834,
+    "kind": "Gadget",
+    "name": "Longarms",
+    "description": "The next main attack has % longer range."
+   },
+   {
+    "id": 23000835,
+    "kind": "Gadget",
+    "name": "Jump Scare",
+    "description": "Shade jumps a short distance, fearing enemies for sec when landing."
+   },
+   {
+    "id": 23000832,
+    "kind": "Star Power",
+    "name": "Spooky Speedster",
+    "description": "Hitting opponents with the center of Shade's main attack gives a short movement speed boost."
+   },
+   {
+    "id": 23000833,
+    "kind": "Star Power",
+    "name": "Hardened Hoodie",
+    "description": "Shade gets % damage reduction while in its Incorporeal Form."
+   }
+  ]
+ },
+ {
+  "id": 16000000,
+  "name": "Shelly",
+  "slug": "shelly",
+  "rarity": "Common",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Double Barrel",
+  "emojis": [
+   "🥇",
+   "💜",
+   "🤠",
+   "🌟",
+   "💥"
+  ],
+  "abilities": [
+   {
+    "id": 23000255,
+    "kind": "Gadget",
+    "name": "Fast Forward",
+    "description": "Shelly dashes to an aimed direction or forwards, fully reloading her ammo!"
+   },
+   {
+    "id": 23000288,
+    "kind": "Gadget",
+    "name": "Clay Pigeons",
+    "description": "Shelly focuses her fire to a smaller area with an increased range. Can be used times per activation."
+   },
+   {
+    "id": 23000076,
+    "kind": "Star Power",
+    "name": "Shell Shock",
+    "description": "Shelly's Super shells slow down enemies for sec!"
+   },
+   {
+    "id": 23000135,
+    "kind": "Star Power",
+    "name": "Band-Aid",
+    "description": "When Shelly falls below x% health, she instantly heals for x health. Band-Aid recharges in x sec."
+   }
+  ]
+ },
+ {
+  "id": 16000102,
+  "name": "Sirius",
+  "slug": "sirius",
+  "rarity": "Ultra Legendary",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2026,
+  "hypercharge": "Unlimited Power!",
+  "emojis": [
+   "❓",
+   "🎪",
+   "🚫",
+   "🌑",
+   "😈"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000005,
+  "name": "Spike",
+  "slug": "spike",
+  "rarity": "Legendary",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Blooming Season",
+  "emojis": [
+   "🏜️",
+   "💚",
+   "🌸",
+   "💥",
+   "🌵"
+  ],
+  "abilities": [
+   {
+    "id": 23000247,
+    "kind": "Gadget",
+    "name": "Popping Pincushion",
+    "description": "Spike aims and fires a wave of needles that deal damage."
+   },
+   {
+    "id": 23000406,
+    "kind": "Gadget",
+    "name": "Life Plant",
+    "description": "Spike throws a large cactus with health to give cover to teammates. If destroyed, the cactus bursts, and all nearby teammates recover health."
+   },
+   {
+    "id": 23000081,
+    "kind": "Star Power",
+    "name": "Fertilize",
+    "description": "Super heals for x% of damage dealt."
+   },
+   {
+    "id": 23000151,
+    "kind": "Star Power",
+    "name": "Curveball",
+    "description": "Spikes from the cactus grenade fly in a curving motion, making it easier to hit targets."
+   }
+  ]
+ },
+ {
+  "id": 16000037,
+  "name": "Sprout",
+  "slug": "sprout",
+  "rarity": "Mythic",
+  "role": "Artillery",
+  "gender": "Other",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2020,
+  "hypercharge": "Thorns",
+  "emojis": [
+   "🤖",
+   "🧱",
+   "🌱",
+   "🌳",
+   "🪴"
+  ],
+  "abilities": [
+   {
+    "id": 23000244,
+    "kind": "Gadget",
+    "name": "Garden Mulcher",
+    "description": "Sprout consumes a bush to restore x health."
+   },
+   {
+    "id": 23000315,
+    "kind": "Gadget",
+    "name": "Transplant",
+    "description": "Sprout destroys its current Hedge, but will instantly have its Super fully charged again."
+   },
+   {
+    "id": 23000240,
+    "kind": "Star Power",
+    "name": "Overgrowth",
+    "description": "Every x seconds, the next Seed Bomb will explode with a larger explosion radius."
+   },
+   {
+    "id": 23000241,
+    "kind": "Star Power",
+    "name": "Photosynthesis",
+    "description": "Sprout activates a shield, partially protecting itself from all attacks while inside a bush."
+   }
+  ]
+ },
+ {
+  "id": 16000047,
+  "name": "Squeak",
+  "slug": "squeak",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "Bouncy Blob",
+  "emojis": [
+   "🧪",
+   "💧",
+   "🫧",
+   "💣",
+   "🟢"
+  ],
+  "abilities": [
+   {
+    "id": 23000378,
+    "kind": "Gadget",
+    "name": "Windup",
+    "description": "Squeak's next Sticky Blomb deals x% more damage and has x% longer range."
+   },
+   {
+    "id": 23000462,
+    "kind": "Gadget",
+    "name": "Residue",
+    "description": "Squeak's next Sticky Blomb leaves a residue area behind after exploding, slowing down enemies and giving allies sight into bushes for x seconds."
+   },
+   {
+    "id": 23000376,
+    "kind": "Star Power",
+    "name": "Chain Reaction",
+    "description": "Each opponent within the area of a Sticky Blomb's explosion increases the Blomb's damage by x%."
+   },
+   {
+    "id": 23000377,
+    "kind": "Star Power",
+    "name": "Super Sticky",
+    "description": "Secondary Sticky Blomb explosions from Squeak's Super also slow down opponents for x seconds."
+   }
+  ]
+ },
+ {
+  "id": 16000105,
+  "name": "Starr Nova",
+  "slug": "starr-nova",
+  "rarity": "Mythic",
+  "role": "Assassin",
+  "gender": "Female",
+  "speed": "Very Fast",
+  "range": "Normal",
+  "releaseYear": 2026,
+  "hypercharge": "Starr Nova: The Hypercharge",
+  "emojis": [
+   "🎭",
+   "📺",
+   "✨",
+   "🗡️",
+   "🌟"
+  ],
+  "abilities": [
+   {
+    "id": 23001255,
+    "kind": "Gadget",
+    "name": "Floaty Time",
+    "description": "Starr Nova deploys an anti-gravity device, allowing teammates to float inside of the area!"
+   },
+   {
+    "id": 23001256,
+    "kind": "Gadget",
+    "name": "Shining Starr Of Friendship And Justice",
+    "description": "Starr Nova fires an energy ball that damages enemies and heals teammates for . This energy ball can also be teleported to before it hits a target!"
+   },
+   {
+    "id": 23001253,
+    "kind": "Star Power",
+    "name": "Power Level Maximum",
+    "description": "Hitting an enemy Brawler while transformed increases your damage by % to a maximum of %."
+   },
+   {
+    "id": 23001254,
+    "kind": "Star Power",
+    "name": "Mystical Starr Technique",
+    "description": "Starr Nova's main attack also heals teammates for , charging her Super based on healing."
+   }
+  ]
+ },
+ {
+  "id": 16000045,
+  "name": "Stu",
+  "slug": "stu",
+  "rarity": "Epic",
+  "role": "Assassin",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2021,
+  "hypercharge": "Infinitro",
+  "emojis": [
+   "🏁",
+   "🔥",
+   "🏍️",
+   "🤸",
+   "🛞"
+  ],
+  "abilities": [
+   {
+    "id": 23000364,
+    "kind": "Gadget",
+    "name": "Speed Zone",
+    "description": "Stu drops a booster that makes himself, his teammates and other allies move faster while inside its area of effect."
+   },
+   {
+    "id": 23000401,
+    "kind": "Gadget",
+    "name": "Breakthrough",
+    "description": "Stu's next Super can bash through obstacles, making debris fly forward. Each piece of debris deals x damage to any opponent it hits."
+   },
+   {
+    "id": 23000362,
+    "kind": "Star Power",
+    "name": "Zero Drag",
+    "description": "Stu's Nitro Boost Super dash distance increases by x%."
+   },
+   {
+    "id": 23000363,
+    "kind": "Star Power",
+    "name": "Gaso-Heal",
+    "description": "Using his Nitro Boost Super restores x of Stu's health."
+   }
+  ]
+ },
+ {
+  "id": 16000038,
+  "name": "Surge",
+  "slug": "surge",
+  "rarity": "Legendary",
+  "role": "Damage Dealer",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Normal",
+  "releaseYear": 2020,
+  "hypercharge": "Stage 5",
+  "emojis": [
+   "📈",
+   "🥤",
+   "⬆️",
+   "🤖",
+   "🔋"
+  ],
+  "abilities": [
+   {
+    "id": 23000285,
+    "kind": "Gadget",
+    "name": "Power Surge",
+    "description": "Surge's power surges! Increase Super charge rate by % for sec."
+   },
+   {
+    "id": 23000485,
+    "kind": "Gadget",
+    "name": "Power Shield",
+    "description": "Within the next seconds, Surge consumes % of the damage of the next incoming hit and uses the energy to reload ammo."
+   },
+   {
+    "id": 23000283,
+    "kind": "Star Power",
+    "name": "To The Max",
+    "description": "Surge's Main Attack now bounces off walls."
+   },
+   {
+    "id": 23000284,
+    "kind": "Star Power",
+    "name": "Serve Ice Cold",
+    "description": "Surge always spawns with a full Super Charge."
+   }
+  ]
+ },
+ {
+  "id": 16000017,
+  "name": "Tara",
+  "slug": "tara",
+  "rarity": "Mythic",
+  "role": "Damage Dealer",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2017,
+  "hypercharge": "Supermassive",
+  "emojis": [
+   "🌙",
+   "🕳️",
+   "🌀",
+   "🔮",
+   "🎴"
+  ],
+  "abilities": [
+   {
+    "id": 23000266,
+    "kind": "Gadget",
+    "name": "Psychic Enhancer",
+    "description": "Tara and her allies are able to see all enemies, even inside bushes, for x seconds."
+   },
+   {
+    "id": 23000356,
+    "kind": "Gadget",
+    "name": "Support From Beyond",
+    "description": "Tara surrounds herself with three weak Shadows that attack opponents and disappear after x seconds."
+   },
+   {
+    "id": 23000093,
+    "kind": "Star Power",
+    "name": "Black Portal",
+    "description": "Tara's Super cracks open a dimensional portal! A shadowy version of Tara appears and attacks her enemies."
+   },
+   {
+    "id": 23000160,
+    "kind": "Star Power",
+    "name": "Healing Shade",
+    "description": "Tara's Super cracks open a dimensional portal! A shadowy version of Tara appears to heal Tara and her teammates."
+   }
+  ]
+ },
+ {
+  "id": 16000022,
+  "name": "Tick",
+  "slug": "tick",
+  "rarity": "Super Rare",
+  "role": "Artillery",
+  "gender": "Male",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2019,
+  "hypercharge": "Headstrong",
+  "emojis": [
+   "🤖",
+   "⏰",
+   "💥",
+   "🧨",
+   "💣"
+  ],
+  "abilities": [
+   {
+    "id": 23000253,
+    "kind": "Gadget",
+    "name": "Mine Mania",
+    "description": "Tick's next attack fires x mines."
+   },
+   {
+    "id": 23000355,
+    "kind": "Gadget",
+    "name": "Last Hurrah",
+    "description": "Tick gains a x% shield for x seconds. After that, it bursts out for x damage."
+   },
+   {
+    "id": 23000114,
+    "kind": "Star Power",
+    "name": "Well Oiled",
+    "description": "When Tick takes no damage and doesn't attack, he starts recovering health x seconds sooner than normal."
+   },
+   {
+    "id": 23000161,
+    "kind": "Star Power",
+    "name": "Automa-Tick Reload",
+    "description": "Tick's reload time is x% shorter."
+   }
+  ]
+ },
+ {
+  "id": 16000096,
+  "name": "Trunk",
+  "slug": "trunk",
+  "rarity": "Epic",
+  "role": "Tank",
+  "gender": "Other",
+  "speed": "Fast",
+  "range": "Short",
+  "releaseYear": 2025,
+  "hypercharge": "Retread",
+  "emojis": [
+   "⚙️",
+   "🍃",
+   "🤖",
+   "🌳",
+   "🐜"
+  ],
+  "abilities": [
+   {
+    "id": 23001000,
+    "kind": "Gadget",
+    "name": "For The Queen",
+    "description": "Trunk instantly spreads ants in a large area."
+   },
+   {
+    "id": 23001001,
+    "kind": "Gadget",
+    "name": "Worker Ants",
+    "description": "Trunk heals from the first source of damage taken for the next x secs."
+   },
+   {
+    "id": 23000998,
+    "kind": "Star Power",
+    "name": "New Insect Overlords",
+    "description": "Ants also reduce the damage of enemies by x%"
+   },
+   {
+    "id": 23000999,
+    "kind": "Star Power",
+    "name": "Colony Scouts",
+    "description": "Ants reveal hidden enemies."
+   }
+  ]
+ },
+ {
+  "id": 16000108,
+  "name": "Wendy",
+  "slug": "wendy",
+  "rarity": "Mythic",
+  "role": "Support",
+  "gender": "Female",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2026,
+  "hypercharge": "Green Energy",
+  "emojis": [
+   "🌱",
+   "👩‍🔬",
+   "🌍",
+   "🌀",
+   "🌬️"
+  ],
+  "abilities": []
+ },
+ {
+  "id": 16000067,
+  "name": "Willow",
+  "slug": "willow",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Female",
+  "speed": "Normal",
+  "range": "Long",
+  "releaseYear": 2023,
+  "hypercharge": "Psychic Safety",
+  "emojis": [
+   "🌊",
+   "🏮",
+   "🐸",
+   "🌀",
+   "🧠"
+  ],
+  "abilities": [
+   {
+    "id": 23000563,
+    "kind": "Gadget",
+    "name": "Spellbound",
+    "description": "Willow's next Lantern's Curse deals x more damage and applies the entire damage instantly rather than over time."
+   },
+   {
+    "id": 23000564,
+    "kind": "Gadget",
+    "name": "Dive",
+    "description": "Willow dives for x seconds, becoming untargetable but unable to take any action for the duration."
+   },
+   {
+    "id": 23000561,
+    "kind": "Star Power",
+    "name": "Love Is Blind",
+    "description": "Lantern's Curse also reduces reload speed of affected Brawlers by % for seconds."
+   },
+   {
+    "id": 23000562,
+    "kind": "Star Power",
+    "name": "Obsession",
+    "description": "Hexed enemies gain % movement speed while mind controlled."
+   }
+  ]
+ },
+ {
+  "id": 16000098,
+  "name": "Ziggy",
+  "slug": "ziggy",
+  "rarity": "Mythic",
+  "role": "Controller",
+  "gender": "Male",
+  "speed": "Fast",
+  "range": "Long",
+  "releaseYear": 2025,
+  "hypercharge": "The Grand Vortex",
+  "emojis": [
+   "🎭",
+   "🎩",
+   "✨",
+   "⚡",
+   "🪄"
+  ],
+  "abilities": []
+ }
+]
