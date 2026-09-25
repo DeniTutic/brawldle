@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# brawler data sync cache
+/.cache
+!.env.example
+
+# local tool state
+/.serena
+.claude/settings.local.json
