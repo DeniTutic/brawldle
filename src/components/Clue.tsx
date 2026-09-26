@@ -1,18 +1,77 @@
 "use client";
 
-import type { ClueView } from "@/lib/constants";
-import { MODE_INFO } from "@/lib/constants";
+import { useEffect, useState } from "react";
+import {
+  ABILITY_DESC_AFTER,
+  ABILITY_NAME_AFTER,
+  CLASSIC_HINT_AFTER,
+  MODE_INFO,
+  SILHOUETTE_MAX_LEVEL,
+  type ClueView,
+  type Mode,
+} from "@/lib/constants";
+import { readLocal, writeLocal } from "@/lib/settings";
+
+const RULES: Record<Mode, string[]> = {
+  classic: [
+    "Type any brawler's name to guess.",
+    "Each tile shows whether that attribute matches today's brawler.",
+    "▲ / ▼ tell you if the answer is higher (rarer, faster, newer…) or lower.",
+    `Stuck? After ${CLASSIC_HINT_AFTER} misses you get a letter hint.`,
+  ],
+  silhouette: [
+    "Guess who's hiding in the shadow.",
+    "Every miss zooms out a little.",
+    `After ${SILHOUETTE_MAX_LEVEL} misses the colours come back.`,
+  ],
+  emoji: ["These emojis describe one brawler.", "Every miss reveals one more emoji.", "The first ones are the trickiest!"],
+  ability: [
+    "Whose gadget or star power is this icon?",
+    `After ${ABILITY_NAME_AFTER} misses you see its name.`,
+    `After ${ABILITY_DESC_AFTER} misses you see what it does.`,
+  ],
+};
 
 /** The puzzle prompt for each mode. `shakeKey` changes on every wrong guess to replay the shake. */
 export function Clue({ clue, shakeKey, solved }: { clue: ClueView; shakeKey: number; solved: boolean }) {
   const info = MODE_INFO[clue.mode];
+  const seenKey = `bd_seen_${clue.mode}`;
+  // Tips open on a player's first visit to a mode and fold away after their next guess.
+  // (Clues only render after the puzzle is fetched on the client, so reading storage here can't mismatch hydration.)
+  const [tipsAt, setTipsAt] = useState<{ shake: number; solved: boolean } | null>(() =>
+    !solved && !readLocal(seenKey, false) ? { shake: shakeKey, solved } : null,
+  );
+  const tips = tipsAt?.shake === shakeKey && tipsAt.solved === solved;
+  const setTips = (open: boolean) => setTipsAt(open ? { shake: shakeKey, solved } : null);
+  useEffect(() => writeLocal(seenKey, true), [seenKey]);
+
   return (
     <section className="panel relative mx-auto w-full max-w-md overflow-hidden p-4 text-center sm:p-5">
-      <h1 className="stroke-text text-2xl sm:text-3xl" style={{ color: info.color }}>
+      <button
+        onClick={() => setTips(!tips)}
+        aria-expanded={tips}
+        aria-label="How to play this mode"
+        className="slant skin-ink pressable stroke-text-sm absolute right-3 top-3 grid size-9 place-items-center rounded-lg text-lg"
+        style={{ "--drop": "3px", "--bw": "3px" } as React.CSSProperties}
+      >
+        ?
+      </button>
+      <h1 className="stroke-text px-10 text-2xl sm:text-3xl" style={{ color: info.color }}>
         {info.icon} {info.name}
       </h1>
       <p className="mt-2 font-semibold text-white/85">{prompt(clue)}</p>
+      {tips && (
+        <ul className="panel-dark animate-pop mt-3 space-y-1 px-4 py-3 text-left text-sm font-bold text-white/90">
+          {[...RULES[clue.mode], "Fewer guesses = more points and more ⭐!"].map((r) => (
+            <li key={r} className="flex gap-2">
+              <span aria-hidden className="text-gold">▸</span>
+              {r}
+            </li>
+          ))}
+        </ul>
+      )}
       <div key={shakeKey} className={shakeKey ? "animate-shake" : ""}>
+        {clue.mode === "classic" && <ClassicClue clue={clue} />}
         {clue.mode === "silhouette" && <SilhouetteClue clue={clue} solved={solved} />}
         {clue.mode === "emoji" && <EmojiClue clue={clue} />}
         {clue.mode === "ability" && <AbilityClue clue={clue} />}
@@ -34,10 +93,20 @@ function prompt(clue: ClueView) {
   }
 }
 
+function ClassicClue({ clue }: { clue: Extract<ClueView, { mode: "classic" }> }) {
+  if (clue.hint) return <p className="stroke-text animate-pop mt-3 text-xl text-gold">💡 {clue.hint}</p>;
+  if (!clue.nextHintIn) return null;
+  return (
+    <p className="mt-2 text-sm font-bold text-white/70">
+      💡 Letter hint in {clue.nextHintIn} {clue.nextHintIn === 1 ? "miss" : "misses"}
+    </p>
+  );
+}
+
 function SilhouetteClue({ clue, solved }: { clue: Extract<ClueView, { mode: "silhouette" }>; solved: boolean }) {
   return (
     <div className="mt-4">
-      <div className="relative mx-auto aspect-square w-full max-w-72 overflow-hidden rounded-2xl border-4 border-ink bg-[radial-gradient(circle,#fff6c8_0%,#ffd84a_55%,#f5a300_100%)] shadow-[inset_0_0_30px_rgb(0_0_0/0.25),0_5px_0_var(--color-ink)]">
+      <div className="relative mx-auto aspect-square w-full max-w-[min(18rem,40dvh)] overflow-hidden rounded-2xl border-4 border-ink bg-[radial-gradient(circle,#fff6c8_0%,#ffd84a_55%,#f5a300_100%)] shadow-[inset_0_0_30px_rgb(0_0_0/0.25),0_5px_0_var(--color-ink)]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img key={clue.image} src={clue.image} alt="Mystery brawler silhouette" className="size-full animate-pop object-contain" draggable={false} />
       </div>

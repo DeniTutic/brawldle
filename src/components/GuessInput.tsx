@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { BrawlerRef } from "@/lib/constants";
 import { BrawlerPortrait } from "./BrawlerPortrait";
 
@@ -20,8 +20,32 @@ export function GuessInput({
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
+  const [dropUp, setDropUp] = useState(false);
   const input = useRef<HTMLInputElement>(null);
+  const box = useRef<HTMLDivElement>(null);
   const listId = useId();
+
+  // Jump straight into typing on desktop. Phones would pop the keyboard over the clue, so skip them.
+  useEffect(() => {
+    if (window.matchMedia("(pointer: fine)").matches) input.current?.focus({ preventScroll: true });
+  }, []);
+
+  // Open the list upwards when the (on-screen keyboard aware) viewport has no room below the field.
+  const placeList = useCallback(() => {
+    const el = box.current;
+    if (!el) return;
+    const vv = window.visualViewport;
+    const bottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
+    const r = el.getBoundingClientRect();
+    setDropUp(bottom - r.bottom < 260 && r.top - (vv?.offsetTop ?? 0) > bottom - r.bottom);
+  }, []);
+
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!open || !vv) return;
+    vv.addEventListener("resize", placeList);
+    return () => vv.removeEventListener("resize", placeList);
+  }, [open, placeList]);
 
   const matches = useMemo(() => {
     const q = norm(query);
@@ -42,13 +66,12 @@ export function GuessInput({
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowDown") {
+    // When the list opens upwards the best match sits at the bottom, so the arrows flip.
+    const toward = (key: string) => (key === "ArrowDown") !== dropUp;
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
       e.preventDefault();
       setOpen(true);
-      setActive((a) => Math.min(a + 1, matches.length - 1));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      setActive((a) => Math.max(a - 1, 0));
+      setActive((a) => (toward(e.key) ? Math.min(a + 1, matches.length - 1) : Math.max(a - 1, 0)));
     } else if (e.key === "Enter") {
       e.preventDefault();
       choose(matches[active]);
@@ -60,7 +83,7 @@ export function GuessInput({
   const showList = open && matches.length > 0;
 
   return (
-    <div className="relative mx-auto w-full max-w-md">
+    <div ref={box} className="relative mx-auto w-full max-w-md">
       <div className="flex gap-3">
         <div className="slant field min-w-0 flex-1 rounded-xl">
           <input
@@ -83,8 +106,12 @@ export function GuessInput({
               setQuery(e.target.value);
               setOpen(true);
               setActive(0);
+              placeList();
             }}
-            onFocus={() => setOpen(true)}
+            onFocus={() => {
+              setOpen(true);
+              placeList();
+            }}
             onBlur={() => setTimeout(() => setOpen(false), 120)}
             onKeyDown={onKeyDown}
             className="w-full bg-transparent px-5 py-3.5 text-lg font-bold text-ink outline-none placeholder:font-medium placeholder:text-ink/45 disabled:opacity-60"
@@ -97,7 +124,11 @@ export function GuessInput({
         </button>
       </div>
       {showList && (
-        <ul id={listId} role="listbox" className="panel-dark absolute inset-x-0 top-full z-20 mt-3 max-h-80 overflow-auto p-1.5 !bg-[#0c1450]">
+        <ul
+          id={listId}
+          role="listbox"
+          className={`panel-dark absolute inset-x-0 z-20 max-h-[min(20rem,45dvh)] overflow-auto p-1.5 !bg-[#0c1450] ${dropUp ? "bottom-full mb-3 flex flex-col-reverse" : "top-full mt-3"}`}
+        >
           {matches.map((b, i) => (
             <li
               key={b.id}

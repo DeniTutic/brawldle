@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ABILITY_DESC_AFTER, ABILITY_NAME_AFTER, ENDLESS_HEARTS, MODE_INFO, SILHOUETTE_MAX_LEVEL } from "@/lib/constants";
+import { ABILITY_DESC_AFTER, ABILITY_NAME_AFTER, CLASSIC_HINT_AFTER, ENDLESS_HEARTS, FULL_CLEAR_BONUS, MODE_INFO, SILHOUETTE_MAX_LEVEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "How to play",
@@ -21,7 +21,8 @@ export default function AboutPage() {
       <H>{MODE_INFO.classic.icon} Classic</H>
       <p>
         Each guess shows how its <b>rarity, class, gender, movement speed, attack range and release year</b> compare to the answer. Green is a
-        match, red is not. Arrows tell you whether the answer is higher (▲) or lower (▼) — rarer, faster, longer range or newer.
+        match, red is not. Arrows tell you whether the answer is higher (▲) or lower (▼) — rarer, faster, longer range or newer. Stuck?
+        After {CLASSIC_HINT_AFTER} misses you get the brawler&apos;s first letter.
       </p>
       <H>{MODE_INFO.silhouette.icon} Silhouette</H>
       <p>You start zoomed in on a shadowy part of the brawler. Each wrong guess zooms out, and after {SILHOUETTE_MAX_LEVEL} misses the colours are revealed.</p>
@@ -35,13 +36,17 @@ export default function AboutPage() {
       <H>♾️ Endless</H>
       <p>
         Guess brawlers back to back. Every wrong guess costs a heart ({ENDLESS_HEARTS.classic} in Classic, {ENDLESS_HEARTS.mixed} in Mixed,{" "}
-        {ENDLESS_HEARTS.emoji} otherwise); your score is how many brawlers you find before they run out.
+        {ENDLESS_HEARTS.emoji} otherwise); your score is how many brawlers you find before they run out. Guess right on the first try
+        and you win a heart back. Totally stuck? Skip the brawler for one heart.
       </p>
       <H>🏆 Points &amp; streaks</H>
       <ul className="list-disc space-y-1 pl-5">
         <li>Daily solve: 100 points for a first-try guess, 10 fewer for each extra guess (minimum 10).</li>
+        <li>Stars: ★★★ for 3 guesses or fewer, ★★ for up to 6, ★ for any solve.</li>
+        <li>Full clear: solve all four modes in one day for a {FULL_CLEAR_BONUS}-point bonus.</li>
         <li>Endless: 5 points for every brawler you find.</li>
-        <li>Solve a mode on consecutive days to build its streak.</li>
+        <li>Solve a mode on consecutive days to build its streak. Solving any mode keeps your daily 🔥 streak going.</li>
+        <li>Unlock badges for streaks, one-shot solves, full clears, big Endless runs and more. See them on your stats page.</li>
         <li>Sign in with Google to appear on the leaderboards. Progress you made as a guest is kept.</li>
       </ul>
       <div className="mt-8 text-center">
