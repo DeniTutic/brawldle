@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Rubik, Unbounded } from "next/font/google";
 import Link from "next/link";
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </footer>
         <BottomNav />
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );

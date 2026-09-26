@@ -17,7 +17,12 @@ export default function PrivacyPage() {
         <li>Session cookies needed to keep you signed in.</li>
       </ul>
       <h2 className="stroke-text pt-2 text-xl text-gold">What we don&apos;t do</h2>
-      <p>No ads, no third-party trackers, no selling or sharing of your data.</p>
+      <p>No ads, no tracking cookies, no selling or sharing of your data.</p>
+      <h2 className="stroke-text pt-2 text-xl text-gold">Visit statistics</h2>
+      <p>
+        We count visits with Vercel Web Analytics to see which pages people use. It sets no cookies, doesn&apos;t follow you across other
+        sites and only keeps anonymous, aggregated numbers (like page views, country and browser).
+      </p>
       <h2 className="stroke-text pt-2 text-xl text-gold">Deleting your data</h2>
       <p>Clearing your cookies removes the link to guest progress. Signed-in players can ask for their account and data to be deleted by contacting the site owner.</p>
     </article>
