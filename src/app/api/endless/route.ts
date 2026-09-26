@@ -1,5 +1,5 @@
 import { isEndlessMode } from "@/lib/constants";
-import { getEndless, guessEndless, nextEndless, quitEndless, startEndless } from "@/lib/endless";
+import { getEndless, guessEndless, nextEndless, quitEndless, skipEndless, startEndless } from "@/lib/endless";
 import { getPlayer } from "@/lib/player";
 
 export async function GET() {
@@ -15,6 +15,10 @@ export async function POST(req: Request) {
       return Response.json({ run: await startEndless(player, body.mode) });
     case "guess": {
       const res = await guessEndless(player, body.brawlerId);
+      return res.ok ? Response.json({ run: res.state }) : Response.json({ error: res.error }, { status: res.status });
+    }
+    case "skip": {
+      const res = await skipEndless(player);
       return res.ok ? Response.json({ run: res.state }) : Response.json({ error: res.error }, { status: res.status });
     }
     case "next": {

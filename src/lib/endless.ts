@@ -28,7 +28,8 @@ async function view(run: RunDoc, player: Player): Promise<EndlessState> {
     score: run.score,
     over: run.status === "over",
     best: await bestFor(player, run.mode),
-    round: roundView(round, (level) => `/api/endless/image?r=${tag}&l=${level}`, round.solved || run.status === "over"),
+    roundNo: run.rounds ?? 1,
+    round: roundView(round, (level) => `/api/endless/image?r=${tag}&l=${level}`, round.solved || !!round.skipped || run.status === "over"),
   };
 }
 
@@ -52,6 +53,7 @@ export async function startEndless(player: Player, mode: EndlessMode) {
     hearts: ENDLESS_HEARTS[mode],
     maxHearts: ENDLESS_HEARTS[mode],
     score: 0,
+    rounds: 1,
     status: "active",
     round,
     recent: [round.brawlerId],
@@ -59,6 +61,28 @@ export async function startEndless(player: Player, mode: EndlessMode) {
   };
   await col.runs().insertOne(run);
   return view(run, player);
+}
+
+/** Stores points and the Endless best after a solve or when a run ends. */
+async function recordEndless(player: Player, run: RunDoc, solved: boolean) {
+  if (!solved && run.status !== "over") return;
+  await ensurePlayer(player);
+  const best = await bestFor(player, run.mode);
+  await col.players().updateOne(
+    { _id: player.key },
+    {
+      $inc: { points: solved ? ENDLESS_POINTS_PER_SOLVE : 0 },
+      $set: { [`endlessBest.${run.mode}`]: Math.max(best, run.score), updatedAt: new Date() },
+    },
+  );
+}
+
+function loseHeart(run: RunDoc) {
+  run.hearts -= 1;
+  if (run.hearts <= 0) {
+    run.status = "over";
+    run.endedAt = new Date();
+  }
 }
 
 export async function guessEndless(player: Player, brawlerId: unknown) {
@@ -69,40 +93,48 @@ export async function guessEndless(player: Player, brawlerId: unknown) {
   const result = applyGuess(round, brawlerId);
   if (!result.ok) return result;
 
-  if (result.correct) run.score += 1;
-  else run.hearts -= 1;
-  if (run.hearts <= 0) {
-    run.status = "over";
-    run.endedAt = new Date();
-  }
+  if (result.correct) {
+    run.score += 1;
+    if (round.guesses.length === 1) run.hearts = Math.min(run.maxHearts, run.hearts + 1); // first-try refund
+  } else loseHeart(run);
   const res = await col.runs().updateOne(
     { _id: run._id, status: "active", "round.guesses": { $size: prevGuesses } },
     { $set: { round, score: run.score, hearts: run.hearts, status: run.status, endedAt: run.endedAt, userId: player.userId, name: player.name, image: player.image ?? null } },
   );
   if (!res.modifiedCount) return { ok: false as const, error: "Try again", status: 409 };
+  await recordEndless(player, run, result.correct);
+  return { ok: true as const, state: await view(run, player) };
+}
 
-  if (result.correct || run.status === "over") {
-    await ensurePlayer(player);
-    const best = await bestFor(player, run.mode);
-    await col.players().updateOne(
-      { _id: player.key },
-      {
-        $inc: { points: result.correct ? ENDLESS_POINTS_PER_SOLVE : 0 },
-        $set: { [`endlessBest.${run.mode}`]: Math.max(best, run.score), updatedAt: new Date() },
-      },
-    );
-  }
+/** Gives up on the current round for a heart and reveals the answer. */
+export async function skipEndless(player: Player) {
+  const run = await activeRun(player);
+  if (!run) return { ok: false as const, error: "No active run", status: 404 };
+  if (run.round.solved || run.round.skipped) return { ok: false as const, error: "Round is over", status: 409 };
+  run.round.skipped = true;
+  loseHeart(run);
+  const res = await col.runs().updateOne(
+    { _id: run._id, status: "active", "round.solved": false, "round.skipped": { $ne: true } },
+    { $set: { "round.skipped": true, hearts: run.hearts, status: run.status, endedAt: run.endedAt } },
+  );
+  if (!res.modifiedCount) return { ok: false as const, error: "Try again", status: 409 };
+  await recordEndless(player, run, false);
   return { ok: true as const, state: await view(run, player) };
 }
 
 export async function nextEndless(player: Player) {
   const run = await activeRun(player);
   if (!run) return { ok: false as const, error: "No active run", status: 404 };
-  if (!run.round.solved) return { ok: false as const, error: "Round not solved", status: 409 };
+  if (!run.round.solved && !run.round.skipped) return { ok: false as const, error: "Round not finished", status: 409 };
   const round = await roundFor(run.mode as EndlessMode, run.recent);
   const recent = [...run.recent, round.brawlerId].slice(-RECENT);
-  await col.runs().updateOne({ _id: run._id, "round.solved": true }, { $set: { round, recent } });
-  return { ok: true as const, state: await view({ ...run, round, recent }, player) };
+  const rounds = (run.rounds ?? 1) + 1;
+  const res = await col.runs().updateOne(
+    { _id: run._id, $or: [{ "round.solved": true }, { "round.skipped": true }] },
+    { $set: { round, recent, rounds } },
+  );
+  if (!res.modifiedCount) return { ok: false as const, error: "Try again", status: 409 };
+  return { ok: true as const, state: await view({ ...run, round, recent, rounds }, player) };
 }
 
 export async function quitEndless(player: Player) {

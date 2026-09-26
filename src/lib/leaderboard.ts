@@ -1,4 +1,5 @@
 import "server-only";
+import { unlockedBadges } from "./achievements";
 import { MODES, isEndlessMode, isMode, type Mode } from "./constants";
 import { col } from "./db";
 import { addDays, dayOf } from "./day";
@@ -55,16 +56,48 @@ export async function leaderboard(board: Board, mode: string, me: Player | null)
   return mark(players.map((p, i) => ({ rank: i + 1, key: p._id, name: nameOf(p.name), image: p.image ?? null, value: p.points })));
 }
 
+/** Guess-count histogram buckets: index 0 = solved in 1 guess … index 9 = 10 or more. */
+export const DIST_BUCKETS = 10;
+
 export async function playerStats(player: Player) {
-  const p = await col.players().findOne({ _id: player.key });
+  const [p, distRows] = await Promise.all([
+    col.players().findOne({ _id: player.key }),
+    col.games()
+      .aggregate<{ _id: { mode: string; g: number }; n: number }>([
+        { $match: { playerKey: player.key, solved: true } },
+        { $group: { _id: { mode: "$mode", g: { $min: [{ $size: "$guesses" }, DIST_BUCKETS] } }, n: { $sum: 1 } } },
+      ])
+      .toArray(),
+  ]);
   const yesterday = addDays(dayOf(), -1);
   const rankAbove = p?.userId && p.points > 0 ? await col.players().countDocuments({ userId: { $type: "string" }, points: { $gt: p.points } }) : null;
+
+  const dist = Object.fromEntries(MODES.map((m) => [m, Array<number>(DIST_BUCKETS).fill(0)])) as Record<Mode, number[]>;
+  for (const { _id, n } of distRows) if (isMode(_id.mode) && _id.g >= 1) dist[_id.mode][_id.g - 1] += n;
+
+  const any = p?.streaks?.any;
+  const endlessBest = p?.endlessBest ?? {};
+  const solves = MODES.reduce((sum, m) => sum + (p?.solves?.[m] ?? 0), 0);
+  const badges = unlockedBadges({
+    solves,
+    oneShots: MODES.reduce((sum, m) => sum + dist[m][0], 0),
+    fullClears: p?.fullClears ?? 0,
+    bestStreak: Math.max(0, ...Object.values(p?.streaks ?? {}).map((s) => s.best)),
+    endlessBest: Math.max(0, ...Object.values(endlessBest)),
+    points: p?.points ?? 0,
+  });
+
   return {
     signedIn: !!player.userId,
     name: player.name ?? null,
     image: player.image ?? null,
     points: p?.points ?? 0,
     pointsRank: rankAbove == null ? null : rankAbove + 1,
+    streak: any && any.lastDay >= yesterday ? any.current : 0,
+    bestStreak: any?.best ?? 0,
+    solves,
+    fullClears: p?.fullClears ?? 0,
+    badges,
     modes: MODES.map((mode) => {
       const s = p?.streaks?.[mode];
       const solves = p?.solves?.[mode] ?? 0;
@@ -74,8 +107,11 @@ export async function playerStats(player: Player) {
         avgGuesses: solves ? Math.round(((p?.totalGuesses?.[mode] ?? 0) / solves) * 10) / 10 : null,
         streak: s && s.lastDay >= yesterday ? s.current : 0,
         bestStreak: s?.best ?? 0,
+        dist: dist[mode],
       };
     }),
-    endlessBest: p?.endlessBest ?? {},
+    endlessBest,
   };
 }
+
+export type PlayerStats = Awaited<ReturnType<typeof playerStats>>;

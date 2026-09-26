@@ -86,5 +86,8 @@ async function mergeGuest(guestKey: string, user: Player) {
   set.totalGuesses = { ...u.totalGuesses };
   for (const [m, v] of Object.entries(guest.solves ?? {})) set.solves[m] = (u.solves?.[m] ?? 0) + v;
   for (const [m, v] of Object.entries(guest.totalGuesses ?? {})) set.totalGuesses[m] = (u.totalGuesses?.[m] ?? 0) + v;
+  set.fullClears = (u.fullClears ?? 0) + (guest.fullClears ?? 0);
+  const lastFullClear = [u.lastFullClear, guest.lastFullClear].filter(Boolean).sort().pop();
+  if (lastFullClear) set.lastFullClear = lastFullClear;
   await col.players().updateOne({ _id: user.key }, { $set: set });
 }

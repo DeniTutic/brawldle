@@ -31,11 +31,20 @@ export type GameDoc = {
   guessCount?: number;
   durationMs?: number;
   points?: number;
+  bonus?: number;
   startedAt: Date;
   solvedAt?: Date;
 };
 
-export type RoundDoc = { mode: string; brawlerId: number; abilityId?: number; focus?: { x: number; y: number }; guesses: number[]; solved: boolean };
+export type RoundDoc = {
+  mode: string;
+  brawlerId: number;
+  abilityId?: number;
+  focus?: { x: number; y: number };
+  guesses: number[];
+  solved: boolean;
+  skipped?: boolean;
+};
 
 export type RunDoc = {
   _id: string;
@@ -47,6 +56,7 @@ export type RunDoc = {
   hearts: number;
   maxHearts: number;
   score: number;
+  rounds?: number; // rounds played, including the current one
   status: "active" | "over";
   round: RoundDoc;
   recent: number[];
@@ -61,10 +71,12 @@ export type PlayerDoc = {
   name?: string;
   image?: string | null;
   points: number;
-  streaks: Record<string, StreakDoc>;
+  streaks: Record<string, StreakDoc>; // per mode, plus "any" = solved at least one mode that day
   endlessBest: Record<string, number>;
   solves: Record<string, number>;
   totalGuesses: Record<string, number>;
+  fullClears?: number; // days with all four modes solved
+  lastFullClear?: string;
   mergedInto?: string;
   createdAt: Date;
   updatedAt: Date;

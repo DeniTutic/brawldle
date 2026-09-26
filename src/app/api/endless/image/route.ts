@@ -9,7 +9,7 @@ export async function GET() {
   const round = run?.round;
   if (!round || (round.mode !== "silhouette" && round.mode !== "ability")) return new Response("Not found", { status: 404 });
   if (round.mode === "ability") return pngResponse(await abilityPng(round.abilityId!));
-  const reveal = round.solved || run.status === "over";
+  const reveal = round.solved || !!round.skipped || run.status === "over";
   const wrong = round.guesses.filter((g) => g !== round.brawlerId).length;
   return pngResponse(await silhouettePng(round.brawlerId, round.focus!, reveal ? SILHOUETTE_MAX_LEVEL : Math.min(wrong, SILHOUETTE_MAX_LEVEL)));
 }

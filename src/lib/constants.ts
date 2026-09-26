@@ -37,12 +37,17 @@ export const SILHOUETTE_MAX_LEVEL = 7; // level 7 = full-size, in colour
 export const EMOJI_COUNT = 5;
 export const ABILITY_NAME_AFTER = 3; // wrong guesses before the ability name is revealed
 export const ABILITY_DESC_AFTER = 6;
+export const CLASSIC_HINT_AFTER = 6; // wrong guesses before Classic reveals the first letter
 
 export const ENDLESS_HEARTS: Record<EndlessMode, number> = { classic: 15, silhouette: 10, emoji: 10, ability: 10, mixed: 12 };
 export const ENDLESS_POINTS_PER_SOLVE = 5;
+export const FULL_CLEAR_BONUS = 50;
 
 /** Points for a daily solve: 100 for a first-try guess, -10 per extra guess, minimum 10. */
 export const dailyPoints = (guessCount: number) => Math.max(10, 110 - 10 * guessCount);
+
+/** 1-3 star rating for a solve. */
+export const starsFor = (guessCount: number) => (guessCount <= 3 ? 3 : guessCount <= 6 ? 2 : 1);
 
 export type BrawlerRef = { id: number; name: string; slug: string };
 
@@ -60,7 +65,7 @@ export type ClassicCell = { key: ClassicKey; value: string | number; correct: bo
 export type GuessView = { brawler: BrawlerRef; correct: boolean; cells?: ClassicCell[] };
 
 export type ClueView =
-  | { mode: "classic" }
+  | { mode: "classic"; hint?: string; nextHintIn?: number }
   | { mode: "silhouette"; level: number; maxLevel: number; image: string }
   | { mode: "emoji"; emojis: string[]; total: number }
   | { mode: "ability"; image: string; kind: string; name?: string; description?: string; nextHintIn?: number };
@@ -71,13 +76,17 @@ export type RoundView = {
   solved: boolean;
   clue: ClueView;
   answer?: BrawlerRef;
+  answerInfo?: { rarity: string; role: string };
+  skipped?: boolean;
 };
 
 export type DailyState = RoundView & {
   day: string;
   puzzleNo: number;
   pointsEarned?: number;
+  bonus?: number; // full-clear bonus, on the puzzle that completed the day
   solvers: number;
+  percentile?: number; // share of other solvers who needed more guesses, once solved
   nextPuzzleAt: string;
 };
 
@@ -89,5 +98,6 @@ export type EndlessState = {
   score: number;
   over: boolean;
   best: number;
+  roundNo: number;
   round: RoundView;
 };

@@ -3,6 +3,7 @@ import {
   ABILITY_DESC_AFTER,
   ABILITY_NAME_AFTER,
   CLASSIC_COLUMNS,
+  CLASSIC_HINT_AFTER,
   EMOJI_COUNT,
   RANGE_ORDER,
   RARITY_ORDER,
@@ -16,7 +17,15 @@ import {
 import { BRAWLERS, getBrawler, toRef, type Brawler } from "./brawlers";
 import { pickFocus } from "./images";
 
-export type Round = { mode: Mode; brawlerId: number; abilityId?: number; focus?: { x: number; y: number }; guesses: number[]; solved: boolean };
+export type Round = {
+  mode: Mode;
+  brawlerId: number;
+  abilityId?: number;
+  focus?: { x: number; y: number };
+  guesses: number[];
+  solved: boolean;
+  skipped?: boolean; // Endless: given up for a heart, answer revealed
+};
 
 const ORDERS: Partial<Record<string, string[]>> = { rarity: RARITY_ORDER, speed: SPEED_ORDER, range: RANGE_ORDER };
 
@@ -38,7 +47,7 @@ export function classicCells(guess: Brawler, answer: Brawler): ClassicCell[] {
 const wrongCount = (r: Round) => r.guesses.filter((g) => g !== r.brawlerId).length;
 
 /** Builds what the player is allowed to see for a round. The answer is only included once revealed. */
-export function roundView(r: Round, imageUrl: (level: number) => string, reveal = r.solved): RoundView {
+export function roundView(r: Round, imageUrl: (level: number) => string, reveal = r.solved || !!r.skipped): RoundView {
   const answer = getBrawler(r.brawlerId)!;
   const wrong = wrongCount(r);
   const guesses = r.guesses.map((id) => {
@@ -50,7 +59,11 @@ export function roundView(r: Round, imageUrl: (level: number) => string, reveal 
   let clue: ClueView;
   switch (r.mode) {
     case "classic":
-      clue = { mode: "classic" };
+      clue = reveal
+        ? { mode: "classic" }
+        : wrong >= CLASSIC_HINT_AFTER
+          ? { mode: "classic", hint: `Starts with "${answer.name[0]}"` }
+          : { mode: "classic", nextHintIn: CLASSIC_HINT_AFTER - wrong };
       break;
     case "silhouette": {
       const level = reveal ? SILHOUETTE_MAX_LEVEL : Math.min(wrong, SILHOUETTE_MAX_LEVEL);
@@ -76,7 +89,15 @@ export function roundView(r: Round, imageUrl: (level: number) => string, reveal 
       break;
     }
   }
-  return { mode: r.mode, guesses, solved: r.solved, clue, answer: reveal ? toRef(answer) : undefined };
+  return {
+    mode: r.mode,
+    guesses,
+    solved: r.solved,
+    skipped: r.skipped || undefined,
+    clue,
+    answer: reveal ? toRef(answer) : undefined,
+    answerInfo: reveal ? { rarity: answer.rarity, role: answer.role } : undefined,
+  };
 }
 
 /** Picks a fresh answer for a mode, avoiding recently used brawlers where possible. */
@@ -97,6 +118,7 @@ export type GuessResult = { ok: true; correct: boolean } | { ok: false; error: s
 /** Applies a guess to a round in place. */
 export function applyGuess(r: Round, brawlerId: unknown): GuessResult {
   if (r.solved) return { ok: false, error: "Already solved", status: 409 };
+  if (r.skipped) return { ok: false, error: "Round is over", status: 409 };
   if (typeof brawlerId !== "number" || !getBrawler(brawlerId)) return { ok: false, error: "Unknown brawler", status: 400 };
   if (r.guesses.includes(brawlerId)) return { ok: false, error: "Already guessed", status: 409 };
   r.guesses.push(brawlerId);
