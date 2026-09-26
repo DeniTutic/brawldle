@@ -4,13 +4,20 @@ A daily Brawl Stars guessing game, in the style of Wordle and Loldle. Every day 
 
 | Mode | How it works |
 | --- | --- |
-| 🏆 **Classic** | Every guess shows rarity, class, gender, speed, range and release year: green or red, with ▲▼ hints. |
+| 🏆 **Classic** | Every guess shows rarity, class, gender, speed, range and release year: green or red, with ▲▼ hints. The first letter is revealed after 6 misses. |
 | 👤 **Silhouette** | A zoomed-in shadow that zooms out with every miss. Colors appear after 7 misses. |
 | 😎 **Emoji** | Five emoji clues, revealed one per miss. |
 | ⚡ **Ability** | Whose gadget or star power is this? The name is revealed after 3 misses, the description after 6. |
-| ♾️ **Endless** | Back-to-back brawlers in any mode or Mixed. A wrong guess costs a ❤️. |
+| ♾️ **Endless** | Back-to-back brawlers in any mode or Mixed. A wrong guess costs a ❤️, a first-try guess wins one back, and a stuck round can be skipped for a ❤️. |
 
 Players can also sign in with Google. Leaderboards cover today's fewest guesses, streaks, Endless high scores and all-time points. Guests can play without an account, and their progress merges into their account when they sign in.
+
+To keep players coming back:
+- **Share results**: a spoiler-free emoji grid for each mode, the whole day, or an Endless run.
+- **Stars, streaks and bonuses**: 1–3 ⭐ per solve, a daily 🔥 streak across all modes, and +50 points for clearing all four modes in a day.
+- **Badges**: 13 badges derived from stats (`src/lib/achievements.ts`), shown on the stats page.
+- **Stats**: guess distribution per mode, and "better than X% of players today" after a solve.
+- **Settings**: sound and vibration (synthesized in `src/lib/sfx.ts`, no audio files) and a colour-blind palette.
 
 ## Stack
 
@@ -53,6 +60,8 @@ After that:
 - Add 5 emoji clues for each new brawler to `src/data/emoji-clues.json`, ordered from vague to obvious. The build script lists any that are missing.
 - Check the `PROBLEMS` list the build prints. Brawlers without a portrait yet (not released) are skipped automatically.
 - Attribute overrides for tricky brawlers are at the top of `scripts/build-data.mjs`.
+
+The favicon, Apple touch icon and PWA icons are rendered from the star logo by `npm run icons` (`scripts/build-icons.mjs`). Link preview images use the fonts in `assets/fonts/`.
 
 ## Deploying
 
