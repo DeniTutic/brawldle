@@ -22,6 +22,7 @@
   --animate-flip: flip 0.5s ease-out both;
   --animate-shake: shake 0.4s ease-in-out;
   --animate-float: float 3s ease-in-out infinite;
+  --animate-bump: bump 0.45s cubic-bezier(0.2, 1.6, 0.4, 1);
 }
 
 :root {
@@ -44,6 +45,14 @@
   0%, 100% { transform: translateX(0); }
   20%, 60% { transform: translateX(-8px); }
   40%, 80% { transform: translateX(8px); }
+}
+@keyframes bump {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+}
+@keyframes confetti {
+  from { transform: translate3d(0, -12vh, 0) rotate(0); }
+  to { transform: translate3d(var(--dx), 108vh, 0) rotate(var(--spin)); }
 }
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
@@ -236,6 +245,12 @@ body {
   .tile-win { background: var(--sheen), linear-gradient(180deg, #62e86b, #27b233); }
   .tile-lose { background: var(--sheen), linear-gradient(180deg, #ff6560, #d02826); }
   .tile .stroke-text-sm { -webkit-text-stroke-width: 3.5px; }
+
+  /* Colour-blind mode: orange = right, blue = wrong (the Wordle high-contrast convention) */
+  html[data-contrast="high"] .tile-win { background: var(--sheen), linear-gradient(180deg, #ffb347, #f07c00); }
+  html[data-contrast="high"] .tile-lose { background: var(--sheen), linear-gradient(180deg, #86a8ff, #3f62d8); }
+  html[data-contrast="high"] .skin-win { --skin: linear-gradient(180deg, #ffb347, #f07c00); --edge: #a24f00; }
+  html[data-contrast="high"] .skin-lose { --skin: linear-gradient(180deg, #86a8ff, #3f62d8); --edge: #1f3a93; }
   .tile-arrow { position: absolute; inset: 0; display: grid; place-items: center; font-size: 3.4rem; opacity: 0.28; color: var(--color-ink); pointer-events: none; }
 }
 

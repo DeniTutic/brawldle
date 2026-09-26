@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Rubik, Unbounded } from "next/font/google";
 import Link from "next/link";
-import { Header } from "@/components/Header";
+import { BottomNav, Header } from "@/components/Header";
+import { Toaster } from "@/components/Toast";
 import { googleEnabled } from "@/lib/auth";
 import "./globals.css";
 
@@ -21,12 +22,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export const viewport: Viewport = { themeColor: "#1a3aca", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#1a3aca", width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${unbounded.variable} ${rubik.variable}`}>
-      <body className="flex min-h-dvh flex-col antialiased">
+      <body className="flex min-h-dvh flex-col pb-[calc(4.5rem+env(safe-area-inset-bottom))] antialiased md:pb-0">
         <Header googleEnabled={googleEnabled} />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-4">{children}</main>
         <footer className="mx-auto w-full max-w-5xl px-4 pb-8 text-center text-xs leading-relaxed text-white/55">
@@ -40,6 +41,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </a>
           . Brawler data: Brawlify &amp; the Brawl Stars Wiki.
         </footer>
+        <BottomNav />
+        <Toaster />
       </body>
     </html>
   );
