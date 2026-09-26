@@ -2,6 +2,8 @@ import Link from "next/link";
 import { BrawlerPortrait } from "@/components/BrawlerPortrait";
 import { Countdown } from "@/components/GameBits";
 import { Logo } from "@/components/Logo";
+import { TodayProgress } from "@/components/TodayProgress";
+import { BRAWLERS } from "@/lib/brawlers";
 import { MODE_INFO } from "@/lib/constants";
 import { dailySummary } from "@/lib/daily";
 import { peekPlayer } from "@/lib/player";
@@ -10,16 +12,45 @@ export default async function Home() {
   const player = await peekPlayer();
   const summary = await dailySummary(player ?? { key: "anonymous" });
   const cleared = summary.modes.filter((m) => m.solved).length;
+  const started = summary.modes.some((m) => m.guesses > 0);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", name: "Brawldle", url: siteUrl },
+      {
+        "@type": "VideoGame",
+        name: "Brawldle",
+        url: siteUrl,
+        description: "A free daily guessing game for Brawl Stars fans: find the brawler of the day in Classic, Silhouette, Emoji and Ability modes.",
+        genre: ["Puzzle", "Trivia"],
+        gamePlatform: "Web browser",
+        applicationCategory: "Game",
+        offers: { "@type": "Offer", price: 0, priceCurrency: "USD" },
+      },
+    ],
+  };
 
   return (
     <div className="flex flex-col items-center gap-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <section className="mt-4 text-center">
         <Logo className="animate-float text-[2.2rem] sm:text-7xl" />
         <p className="stroke-text-sm mt-4 text-balance text-lg sm:text-xl">Guess the Brawl Stars brawler of the day!</p>
         <p className="mt-1 font-bold text-white/75">
           Puzzle #{summary.puzzleNo} · New brawlers in <Countdown to={summary.nextPuzzleAt} className="text-white" />
         </p>
+        {summary.solvesToday >= 10 && (
+          <p className="mt-1 text-sm font-bold text-white/65">{summary.solvesToday.toLocaleString()} brawlers found today</p>
+        )}
+        {summary.streak > 0 && (
+          <p className="mt-3">
+            <span className="slant chip skin-gold stroke-text-sm animate-pop text-lg">🔥 {summary.streak}-day streak</span>
+          </p>
+        )}
       </section>
+
+      {started && <TodayProgress puzzleNo={summary.puzzleNo} modes={summary.modes} streak={summary.streak} />}
 
       <section className="grid w-full max-w-2xl grid-cols-2 gap-3 sm:gap-4" aria-label="Daily modes">
         {summary.modes.map(({ mode, solved, guesses }) => {
@@ -87,7 +118,7 @@ export default async function Home() {
         <h2 className="stroke-text-sm mb-1 text-base text-white">What is Brawldle?</h2>
         Brawldle is a free daily guessing game for Brawl Stars fans, inspired by Wordle. Every day at 00:00 UTC there&apos;s a new
         brawler to find in four modes. Keep your streak alive, climb the global leaderboards and test your knowledge of all{" "}
-        {`${"100+"}`} brawlers in Endless mode.
+        {BRAWLERS.length} brawlers in Endless mode.
       </section>
     </div>
   );
